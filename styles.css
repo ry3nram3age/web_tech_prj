@@ -2,13 +2,9 @@
 Index HTML Styling Section
 */
 
-body.home {
+body.home-body {
     margin: 0;
     padding: 0;
-}
-
-#home-logo {
-    width: 15%;
 }
 
 #home-header {
@@ -17,8 +13,22 @@ body.home {
     height: 10%;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
+#home-logo {
+    width: 15%;
+    margin-right: 1200px;
+
+}
+
+
+
+.home-navlinks{
+    text-decoration: none;
+}
 
 /* 
 About HTML Styling Section
