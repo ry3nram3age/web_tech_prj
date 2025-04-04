@@ -18,7 +18,7 @@ main {
     flex: 1;
 }
 
-#home-header {
+header {
     display: flex;
     align-items: center;
     background: linear-gradient(to right, #292929, #3b3b3b);
@@ -65,7 +65,7 @@ main {
     width: 100%;
 }
 
-#footer {
+footer {
     background: linear-gradient(to right, #292929, #3b3b3b);
     display: flex;
     align-items: flex-end;
