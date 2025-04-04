@@ -30,6 +30,7 @@ main {
     width: 18rem;
     max-width: 100%;
     margin: 0;
+    padding-right: 2rem;
 }
 
 #home-navigation {
@@ -70,10 +71,19 @@ main {
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem;
-    
+    padding: 3rem;
+    border-top: 2px white solid;
+
 }
 
+main {
+    background: linear-gradient(to right, #292929, #3b3b3b);
+}
+
+#footer-items {
+    text-decoration: none;
+    color: white;
+}
 
 
 /* 
