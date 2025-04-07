@@ -28,7 +28,7 @@
 </html>
 
 
-<!--
+<!-------------------------------------------------------------------------------------------------
 
 --- Job application page (apply.html) ---
 This page has a form that allows a potential candidate to register their interest in the advertised
@@ -36,21 +36,28 @@ position. HTML5 data validation should be used to check the user’s input.
 The form will allow a potential applicant to fill in the following:
 
 
-    Field Format requirement        Job reference number drop down selection including all jobs ref numbers
+    Field                           Format requirement        
+    
+    Job reference number            drop down selection including all jobs ref numbers
+
+Personal Info
     First name                      max 20 alpha characters
     Last name                       max 20 alpha characters
     Date of birth                   dd/mm/yyyy
     Gender                          radio inputs grouped using a fieldset and legend
-    
+
+Adress
     Street Address                  max 40 characters
     Suburb/town                     max 40 characters
     State                           drop down selection from
                                     VIC,NSW,QLD,NT,WA,SA,TAS,ACT
     Postcode                        exactly 4 digits based on States
 
+Contact Information
     Email address                   validate format with regular expression & patterns
     Phone number                    8 to 12 digits, or spaces
 
+Other important Information
     Required technical list         checkbox inputs
     Other skills                    textarea
 
@@ -67,15 +74,29 @@ just echo back the name value pairs to the client. While nothing will be stored 
 this part of the assignment (we will do this in Part 2) this will allow the form submission to be
 tested.
 
--->
 
-<!--
+-------------------------------------------------------------------------------------------------
+
 When pushing to branch:
 
+    git add . 
+        (stages)
+    git commit -m "{msg}"
+        (commits to main branch)
+    git push origin {branch}
+        (pushes changes to {branch})
 
 
 When pushing to Main:
+    go to online github
+    new pull request
+    select my branch
+    select what changes u want
+    create pull request
+    wait for at least 2 people to approve
+    when that occours, click merge pull request and it goes to main.
+
+------------------------------------------------------------------------------------------------->
 
 
-
--->
+<!-- test2 -->
