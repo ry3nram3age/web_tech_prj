@@ -29,99 +29,105 @@
 
 
     <main>
-        <fieldset>
-            <legend> Job Reference Number</legend>
-                <!-- JOB REFERENCE NUMBER -->
-                 
-        </fieldset>
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <fieldset>
+                <legend> Job Reference Number</legend>
+                    <!-- JOB REFERENCE NUMBER -->
+                    
+            </fieldset>
 
 
-        <fieldset>
-            <legend> Personal Information </legend>
-                <!-- FIRST NAME -->
-                <!-- LAST NAME -->
-                 <p>
-                    <label for="firstName">First Name</label> 
-		                <input type="text" name= "firstName" id="firstName" required="required"/>
+            <fieldset>
+                <legend> Personal Information </legend>
+                    <!-- FIRST NAME -->
+                    <!-- LAST NAME -->
+                    <p>
+                        <label for="firstName">First Name</label> 
+                            <input type="text" name= "firstName" id="firstName" required="required"/>
 
-                    <label for="lastName">Last Name</label> 
-		                <input type="text" name= "lastName" id="lastName" required="required"/>
-                 </p>
+                        <label for="lastName">Last Name</label> 
+                            <input type="text" name= "lastName" id="lastName" required="required"/>
+                    </p>
 
-                <!-- DATE OF BIRTH -->
-                 <p>
-                    <label for="dateOfBirth">Date of Birth</label> 
-		                <input type="text" name= "dateOfBirth" id="dateOfBirth" required="required"/>
-                 </p>
+                    <!-- DATE OF BIRTH -->
+                    <p>
+                        <label for="dateOfBirth">Date of Birth</label> 
+                            <input type="text" name= "dateOfBirth" id="dateOfBirth" required="required"/>
+                    </p>
 
-                <!-- GENDER -->
-                 <!-- for gender, create male, female, other-->
+                    <!-- GENDER -->
+                    <!-- for gender, create male, female, other-->
 
 
-        </fieldset>
+            </fieldset>
+                
+
+            <fieldset>
+                <legend> Adress </legend>
+                    <!-- STREET ADRESS -->
+                    <p>
+                        <label for="adress">Street Adress</label> 
+                            <input type="text" name= "adress" id="adress" required="required"/>
+                    </p>
+
+                    <!-- SUBURB/TOWN -->
+                    <p>
+                        <label for="suburb">Suburb / Town</label> 
+                            <input type="text" name= "suburb" id="suburb" required="required"/>
+                    </p>
+
+                    <!-- STATE -->
+                    <p>
+                        <label for="state">State</label>
+                            <input type="text" name="state" id="state" required="required"/>
+                    </p>
+
+                    <!-- POSTCODE -->
+                    <p>
+                        <label for="postcode">Postcode</label>
+                            <input type="text" name="postcode" id="postcode" placeholder="1234" required="required"/>
+                    </p>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend> Contact Information </legend>
+                    <!-- EMAIL ADRESS -->
+                    <p>
+                        <label for="email">Email Adress</label>
+                            <input type="text" name="email" id="email" required="required"/>
+                    </p>
+
+                    <!-- PHONE NUMBER -->
+                    <p>
+                        <label for="phoneNumber">Phone Number</label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" required="required"/>
+                    </p>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend> Other Important Information </legend>
+                    <!-- REQUIRED TECHNICAL LIST-->
+                    <p>
+                        <label for="requiredTechnicalList">Required Technical Skills</label>
+                            <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required="required"/>
+                    </p>
+
+                    <!-- OTHER SKILLS -->
+                    <p>
+                        <label for="otherSkills">Other Skills</label>
+                            <input type="text" name="otherSkills" id="otherSkills" required="required"/>
+                    </p>
+
+            </fieldset>
+
+            <input type= "submit" value="Register"/>
+            <input type= "reset" value="Reset Form"/>
             
-
-        <fieldset>
-            <legend> Adress </legend>
-                <!-- STREET ADRESS -->
-                 <p>
-                    <label for="adress">Street Adress</label> 
-		                <input type="text" name= "adress" id="adress" required="required"/>
-                 </p>
-
-                <!-- SUBURB/TOWN -->
-                 <p>
-                    <label for="suburb">Suburb / Town</label> 
-		                <input type="text" name= "suburb" id="suburb" required="required"/>
-                 </p>
-
-                <!-- STATE -->
-                 <p>
-                    <label for="state">State</label>
-                        <input type="text" name="state" id="state" required="required"/>
-                 </p>
-
-                <!-- POSTCODE -->
-                 <p>
-                    <label for="postcode">Postcode</label>
-                        <input type="text" name="postcode" id="postcode" placeholder="1234" required="required"/>
-                 </p>
-
-        </fieldset>
-
-
-        <fieldset>
-            <legend> Contact Information </legend>
-                <!-- EMAIL ADRESS -->
-                 <p>
-                    <label for="email">Email Adress</label>
-                        <input type="text" name="email" id="email" required="required"/>
-                 </p>
-
-                <!-- PHONE NUMBER -->
-                 <p>
-                    <label for="phoneNumber">Phone Number</label>
-                        <input type="text" name="phoneNumber" id="phoneNumber" required="required"/>
-                 </p>
-
-        </fieldset>
-
-
-        <fieldset>
-            <legend> Other Important Information </legend>
-                <!-- REQUIRED TECHNICAL LIST-->
-                 <p>
-                    <label for="requiredTechnicalList">Required Technical Skills</label>
-                        <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required="required"/>
-                 </p>
-
-                <!-- OTHER SKILLS -->
-                 <p>
-                    <label for="otherSkills">Other Skills</label>
-                        <input type="text" name="otherSkills" id="otherSkills" required="required"/>
-                 </p>
-
-        </fieldset>
+        </form>
     </main>
 
 
