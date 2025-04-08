@@ -6,12 +6,15 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
 }
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 main {
@@ -44,10 +47,10 @@ header {
 .home-navlinks {
     position: relative;
     text-decoration: none;
-    color: white;
     font-size: 1.2rem;
     padding: 1rem;
     border-top: 2px solid transparent;
+    color: white;
 }
 
 .home-navlinks:after {
@@ -92,7 +95,74 @@ About HTML Styling Section
 /* 
 Jobs HTML Styling Page
 */
-
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
 /* 
 Apply HTML Styling Page
 */
+
+form, section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #555;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    background-color: #1c1c1c1c;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 0.5rem;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+    width: 95%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+input[type="submit"], input[type="reset"]{
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.8rem, 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #ff6600;
+    background-color: #333
+}
+
+input, textarea, button {
+    transition: all 0.2s ease-in-out;
+}
+/* Mobile and Tablet Responsivness */
+@media (max-width: 768px) {
+    #home-navigation {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    form, section {
+        padding: 1rem;
+    }
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+    }
+}
