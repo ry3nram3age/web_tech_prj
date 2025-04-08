@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/styles.css" rel="stylesheet">
     <title>Data Nexus Application Portal</title>
 </head>
+
+
 <body>
+
+<!------ HEADER ----------------------------------------------------------------------------------->
+
     <header>
 
         <a href="index.html"><img src="images/Data_Nexus_Logo-Photoroom.png" id="home-logo" alt="Data Nexus Official Logo"></a>
@@ -20,9 +27,228 @@
         </nav>
 
     </header>
-    <main></main>
+
+<!------ MAIN ------------------------------------------------------------------------------------->
+
+    <main>
+
+        <p>
+            <h1>Application Form</h1>
+        </p>
+
+        <p>
+            This is the application form page! <br>
+            All questions must be answered in full and correctly before submitting form.
+        </p>
+
+<!------ FORM ------------------------------------------------------------------------------------->
+
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <fieldset>
+                <legend> Job Reference Number</legend>
+                    <!-- JOB REFERENCE NUMBER -->
+                    <p>
+                        <label for="jobReferenceNumber">Job Reference Number</label> 
+                            <input type="text" name= "jobReferenceNumber" id="jobReferenceNumber" required="required"/>
+                    </p>
+                    
+            </fieldset>
+
+
+            <fieldset>
+                <legend> Personal Information </legend>
+                    <!-- FIRST NAME -->
+                    <!-- LAST NAME -->
+                    <p>
+                        <label for="firstName">First Name</label> 
+                            <input type="text" name= "firstName" id="firstName" required="required" maxlength="20" placeholder="Max 20 Charecters"/>
+
+                        <label for="lastName">Last Name</label> 
+                            <input type="text" name= "lastName" id="lastName" required="required" maxlength="20" placeholder="Max 20 Charecters"/>
+                    </p>
+
+                    <!-- DATE OF BIRTH -->
+                    <p>
+                        <label for="dateOfBirth">Date of Birth</label> 
+                            <input type="text" name= "dateOfBirth" id="dateOfBirth" required="required" placeholder="DD/MM/YYYY">
+                    </p>
+
+                    <!-- GENDER -->
+                    <p>
+                        <label for="gender">Gender</label><br>
+
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" value="Male">
+                        
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <br>
+                        <label for="other">Other</label>
+                        <input type="radio" name="gender" id="other" value="Other">
+
+                    </p>
+
+            </fieldset>
+                
+
+            <fieldset>
+                <legend> Adress </legend>
+                    <!-- STREET ADRESS -->
+                    <p>
+                        <label for="adress">Street Adress</label> 
+                            <input type="text" name= "adress" id="adress" required="required" placeholder="26 Lammington Drive"/>
+                    </p>
+
+                    <!-- SUBURB/TOWN -->
+                    <p>
+                        <label for="suburb">Suburb / Town</label> 
+                            <input type="text" name= "suburb" id="suburb" required="required" placeholder="Suburb"/>
+                    </p>
+
+                    <!-- STATE -->
+                    <p>
+                        <label for="state">State</label>
+                            <input type="text" name="state" id="state" required="required" placeholder="Victoria"/>
+                    </p>
+
+                    <!-- POSTCODE -->
+                    <p>
+                        <label for="postcode">Postcode</label>
+                            <input type="text" name="postcode" id="postcode" placeholder="1234" required="required" maxlength="4"/>
+                    </p>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend> Contact Information </legend>
+                    <!-- EMAIL ADRESS -->
+                    <p>
+                        <label for="email">Email Adress</label>
+                            <input type="text" name="email" id="email" required="required" placeholder="text@provider"/>
+                    </p>
+
+                    <!-- PHONE NUMBER -->
+                    <p>
+                        <label for="phoneNumber">Phone Number</label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="123456789"/>
+                    </p>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend> Other Important Information </legend>
+                    <!-- REQUIRED TECHNICAL LIST-->
+                    <p>
+                        <label for="requiredTechnicalList">Required Technical Skills</label>
+                            <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required="required"/>
+                    </p>
+
+                    <!-- OTHER SKILLS -->
+                    <p>
+                        <label for="otherSkills">Other Skills</label>
+                            <input type="text" name="otherSkills" id="otherSkills" required="required"/>
+                    </p>
+
+            </fieldset>
+
+            <input type= "submit" value="Register"/>
+            <input type= "reset" value="Reset Form"/>
+
+        </form>
+    </main>
+
+<!------ FOOTER ----------------------------------------------------------------------------------->
+
     <footer>
         <a href="#" id="footer-items">Jira Project</a>
     </footer>
+
 </body>
 </html>
+
+
+<!-------------------------------------------------------------------------------------------------
+
+--- Job application page (apply.html) ---
+This page has a form that allows a potential candidate to register their interest in the advertised
+position. HTML5 data validation should be used to check the user’s input.
+The form will allow a potential applicant to fill in the following:
+
+
+    Field                           Format requirement        
+    
+    Job reference number            drop down selection including all jobs ref numbers
+
+Personal Info
+    First name                      max 20 alpha characters
+    Last name                       max 20 alpha characters
+    Date of birth                   dd/mm/yyyy
+    Gender                          radio inputs grouped using a fieldset and legend
+
+Adress
+    Street Address                  max 40 characters
+    Suburb/town                     max 40 characters
+    State                           drop down selection from
+                                    VIC,NSW,QLD,NT,WA,SA,TAS,ACT
+    Postcode                        exactly 4 digits based on States
+
+Contact Information
+    Email address                   validate format with regular expression & patterns
+    Phone number                    8 to 12 digits, or spaces
+
+Other important Information
+    Required technical list         checkbox inputs
+    Other skills                    textarea
+
+
+All inputs should have labels. All form values, except the "Other Skills" textarea are ‘required’ or
+have a default value (e.g. select and checkbox inputs). The user should not be able to submit the
+form if any of these required fields are blank or incorrectly filled.
+
+---- Data Submission to Server ---
+The form should have a submit button labelled “Apply”. When this button is clicked the name-
+values from the associated form should be sent to the server using the post http method. The
+server action address is https://mercury.swin.edu.au/it000000/formtest.php. The server will then
+just echo back the name value pairs to the client. While nothing will be stored on the server in
+this part of the assignment (we will do this in Part 2) this will allow the form submission to be
+tested.
+
+
+-------------------------------------------------------------------------------------------------
+
+When pushing to branch:
+
+    git add . 
+        (stages)
+    git commit -m "{msg}"
+        (commits to main branch)
+    git push origin {branch}
+        (pushes changes to {branch})
+
+
+When pushing to Main:
+    go to online github
+    new pull request
+    select my branch
+    select what changes u want
+    create pull request
+    wait for at least 2 people to approve
+    when that occours, click merge pull request and it goes to main.
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+The good luck ducky :)
+
+  __
+<(o )___
+ ( ._> /
+  `---'   
+
+-->
