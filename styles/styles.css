@@ -109,22 +109,33 @@ form, section {
     margin: 0 auto;
 }
 
+form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
 fieldset {
     border: 1px solid #555;
     padding: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     border-radius: 8px;
     background-color: #1c1c1c1c;
+    border-left: 4px solid #ff6600;
 }
 
 legend {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
+    color: #ff6600;
     padding: 0 0.5rem;
+    margin-bottom: 1rem;
 }
 
 input[type="text"], input[type="email"], input[type="number"], textarea {
-    width: 95%;
+    width: 98%;
     padding: 0.8rem;
     margin-top: 0.5rem;
     border: 1px solid #888;
@@ -137,7 +148,7 @@ input[type="submit"], input[type="reset"]{
     background-color: #ff6600;
     color: white;
     border: none;
-    padding: 0.8rem, 2rem;
+    padding: 0.8rem 2rem;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 1rem;
@@ -148,8 +159,19 @@ input:focus, textarea:focus {
     background-color: #333
 }
 
-input, textarea, button {
+input, select, textarea, button {
     transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #1e1e1e;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+*, *::before, *::after {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 /* Mobile and Tablet Responsivness */
 @media (max-width: 768px) {
