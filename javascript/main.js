@@ -17,10 +17,10 @@
         });
         
         
-        const form = document.getElementById("jobApplicationForm");
+        const jobs_form = document.getElementById("jobApplicationForm");
         
         form.addEventListener("reset", () => {
-            const fieldsets = form.querySelectorAll("fieldset");
+            const fieldsets_jobs = jobs_form.querySelectorAll("fieldset");
             
             // Disable all fieldsets except the first
             fieldsets.forEach((fs, index) => {
