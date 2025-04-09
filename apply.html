@@ -78,7 +78,7 @@
                     <!-- LAST NAME -->
                     <p>
                         <label for="firstName">First Name</label> 
-                            <input type="text" name= "firstName" id="firstName" required="required" maxlength="20" placeholder="Please enter first name"/>
+                            <input type="text" name= "firstName" id="firstName" required="required" maxlength="20" placeholder="Please enter first name">
 
                         <label for="lastName">Last Name</label> 
                             <input type="text" name= "lastName" id="lastName" required="required" maxlength="20" placeholder="Please enter your last name"/>
@@ -130,13 +130,22 @@
                     <!-- STATE -->
                     <p>
                         <label for="state">State</label>
-                            <input type="text" name="state" id="state" required="required" placeholder="Victoria"/>
+                            <select name="state" id="state" required="required" placeholder="Victoria">
+                                <option value="volvo">NSW</option>
+                                <option value="saab">VIC</option>
+                                <option value="mercedes">QLD</option>
+                                <option value="audi">WA</option>
+                                <option value="audi">SA</option>
+                                <option value="audi">TAS</option>
+                                <option value="audi">ACT</option>
+                                <option value="audi">NT</option>
+                            </select>
                     </p>
 
                     <!-- POSTCODE -->
                     <p>
                         <label for="postcode">Postcode</label>
-                            <input type="text" name="postcode" id="postcode" placeholder="1234" required="required" maxlength="4"/>
+                            <input type="text" name="postcode" id="postcode" placeholder="1234" required="required" maxlength="4" pattern="^\d{4}$"/>
                     </p>
 
                 </div>
@@ -148,14 +157,14 @@
                 <legend> Contact Information </legend>
                     <!-- EMAIL ADRESS -->
                     <p>
-                        <label for="email">Email Adress</label>
-                            <input type="text" name="email" id="email" required="required" placeholder="text@provider"/>
+                        <label for="email">Email Address</label>
+                            <input type="text" name="email" id="email" required="required" placeholder="text@provider" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
                     </p>
 
                     <!-- PHONE NUMBER -->
                     <p>
                         <label for="phoneNumber">Phone Number</label>
-                            <input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="123456789"/>
+                            <input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="123456789" pattern="^(\(0[2-8]\)|0[2-8])\s?\d{4}\s?\d{4}$" />
                     </p>
 
             </fieldset>
@@ -164,6 +173,7 @@
             <fieldset data-step="5" disabled>
                 <legend> Other Important Information </legend>
                     <!-- REQUIRED TECHNICAL LIST-->
+
                     <p>
                         <label for="requiredTechnicalList">Required Technical Skills</label>
                             <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required="required"/>

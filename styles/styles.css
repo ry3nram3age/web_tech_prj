@@ -114,22 +114,37 @@ h4, h5 {
     font-weight: 500;
 }
 
-#jobs nav {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-#jobs nav a {
-    color: #ff6600;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: 0.3s;
-}
 
 #jobs nav a:hover {
     border-bottom: 1px solid #ff6600;
 }
+
+#jobs-apply {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#cybersecurity_specialist_position {
+    border: #ff6600 solid 3px;
+}
+
+#investigation_team_leader_position {
+    border: #ff6600 solid 3px;
+}
+
+#jobs-list {
+    padding-bottom: 1rem;
+}
+
+#jobs-apply {
+    padding-bottom: 1rem;
+}
+
 /* 
 Apply HTML Styling Page
 */
@@ -148,6 +163,7 @@ Apply HTML Styling Page
     padding: 2rem;
     max-width: 900px;
     margin: 0 auto;
+    padding-top: 1rem;
 }
 
 form {
@@ -236,10 +252,6 @@ ul {
 
 li {
     margin-bottom: 0.5rem;
-}
-
-section {
-    border: #ff6600 1px solid;
 }
 
 /* Mobile and Tablet Responsivness */
