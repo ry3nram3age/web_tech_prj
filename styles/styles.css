@@ -103,7 +103,17 @@ h1, h2, h3 {
 Apply HTML Styling Page
 */
 
-form, section {
+#apply-title {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color : #1e1e1e;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#form, section {
     padding: 2rem;
     max-width: 900px;
     margin: 0 auto;
@@ -144,6 +154,8 @@ input[type="text"], input[type="email"], input[type="number"], textarea {
     color: white;
 }
 
+
+
 input[type="submit"], input[type="reset"]{
     background-color: #ff6600;
     color: white;
@@ -168,10 +180,6 @@ input, select, textarea, button {
     background-color: #1e1e1e;
     color: white;
     font-family: 'Poppins', sans-serif;
-}
-*, *::before, *::after {
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
 }
 /* Mobile and Tablet Responsivness */
 @media (max-width: 768px) {
