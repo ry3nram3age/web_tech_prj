@@ -121,7 +121,7 @@ Apply HTML Styling Page
 
 form {
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 2rem;
     background-color: #1e1e1e;
     border-radius: 1rem;
@@ -156,6 +156,7 @@ input[type="text"], input[type="email"], input[type="number"], textarea {
 
 
 
+
 input[type="submit"], input[type="reset"]{
     background-color: #ff6600;
     color: white;
@@ -163,7 +164,6 @@ input[type="submit"], input[type="reset"]{
     padding: 0.8rem 2rem;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 1rem;
 }
 
 input:focus, textarea:focus {
@@ -181,6 +181,18 @@ input, select, textarea, button {
     color: white;
     font-family: 'Poppins', sans-serif;
 }
+
+fieldset[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%)
+}
+
+form fieldset {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 /* Mobile and Tablet Responsivness */
 @media (max-width: 768px) {
     #home-navigation {
