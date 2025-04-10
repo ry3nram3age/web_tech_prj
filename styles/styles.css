@@ -33,6 +33,13 @@ header {
     width: 18rem;
     max-width: 100%;
     margin: 0;
+    padding-right: 0.1rem;
+}
+
+#accessibility_logo {
+    width: 2em;
+    max-width: 100%;
+    margin: 0;
     padding-right: 2rem;
 }
 
@@ -300,6 +307,9 @@ li {
     margin-bottom: 0.5rem;
 }
 
+#apply-title, form {
+    animation: fadeSlideIn 1s ease-out forwards;
+}
 /* Mobile and Tablet Responsivness */
 @media (max-width: 768px) {
     #home-navigation {
