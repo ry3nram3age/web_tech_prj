@@ -6,6 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/places.js@1.19.0">
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+
+
+ 
+    
+
+
     <title>Data Nexus Application Portal</title>
 </head>
 
@@ -33,45 +42,53 @@
 
     <main>
 
-        <p>
-            <h1>Application Form</h1>
-        </p>
+        <script src="javascript/main.js"></script>
 
-        <p>
-            This is the application form page! <br>
-            All questions must be answered in full and correctly before submitting form.
-        </p>
+        <div id="apply-title">
+            <p>
+                <h1 style="font-size: 3rem;;">Application Form</h1>
+            </p>
+    
+            <p>
+                This is the application form page! <br>
+                All questions must be answered in full and correctly before submitting form.
+            </p>
+        </div>
+
+       
 
 <!------ FORM ------------------------------------------------------------------------------------->
 
-        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-            <fieldset>
-                <legend> Job Reference Number</legend>
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" id="jobApplicationForm">
+            <fieldset data-step="1">
+                <legend>Job Reference Number</legend>
+              
                     <!-- JOB REFERENCE NUMBER -->
                     <p>
                         <label for="jobReferenceNumber">Job Reference Number</label> 
-                            <input type="text" name= "jobReferenceNumber" id="jobReferenceNumber" required="required"/>
+                            <input type="text" name= "jobReferenceNumber" id="jobReferenceNumber" required="required" minlength="9" maxlength="9"/>
                     </p>
-                    
             </fieldset>
 
 
-            <fieldset>
+            <fieldset data-step="2" disabled>
                 <legend> Personal Information </legend>
-                    <!-- FIRST NAME -->
+
+          
+                     <!-- FIRST NAME -->
                     <!-- LAST NAME -->
                     <p>
                         <label for="firstName">First Name</label> 
-                            <input type="text" name= "firstName" id="firstName" required="required" maxlength="20" placeholder="Max 20 Charecters"/>
+                            <input type="text" name= "firstName" id="firstName" required="required" maxlength="20" minlength="9" maxlength="9">
 
                         <label for="lastName">Last Name</label> 
-                            <input type="text" name= "lastName" id="lastName" required="required" maxlength="20" placeholder="Max 20 Charecters"/>
+                            <input type="text" name= "lastName" id="lastName" required="required" maxlength="20" placeholder="Please enter your last name"/>
                     </p>
 
                     <!-- DATE OF BIRTH -->
                     <p>
                         <label for="dateOfBirth">Date of Birth</label> 
-                            <input type="text" name= "dateOfBirth" id="dateOfBirth" required="required" placeholder="DD/MM/YYYY">
+                            <input type="date" name= "dateOfBirth" id="dateOfBirth" required="required" placeholder="DD/MM/YYYY">
                     </p>
 
                     <!-- GENDER -->
@@ -89,15 +106,20 @@
 
                     </p>
 
+          
+             
             </fieldset>
+                   
                 
 
-            <fieldset>
-                <legend> Adress </legend>
-                    <!-- STREET ADRESS -->
-                    <p>
-                        <label for="adress">Street Adress</label> 
-                            <input type="text" name= "adress" id="adress" required="required" placeholder="26 Lammington Drive"/>
+            <fieldset data-step="3" disabled>
+                <legend>Address</legend>
+
+                <div class="apply-fields">
+                     <!-- STREET ADRESS -->
+                     <p>
+                        <label for="address">Street Address</label> 
+                            <input type="text" name= "address" id="streetAddress" required="required" placeholder="26 Lammington Drive"/>
                     </p>
 
                     <!-- SUBURB/TOWN -->
@@ -109,38 +131,50 @@
                     <!-- STATE -->
                     <p>
                         <label for="state">State</label>
-                            <input type="text" name="state" id="state" required="required" placeholder="Victoria"/>
+                            <select name="state" id="state" required="required" placeholder="Victoria">
+                                <option value="volvo">NSW</option>
+                                <option value="saab">VIC</option>
+                                <option value="mercedes">QLD</option>
+                                <option value="audi">WA</option>
+                                <option value="audi">SA</option>
+                                <option value="audi">TAS</option>
+                                <option value="audi">ACT</option>
+                                <option value="audi">NT</option>
+                            </select>
                     </p>
 
                     <!-- POSTCODE -->
                     <p>
                         <label for="postcode">Postcode</label>
-                            <input type="text" name="postcode" id="postcode" placeholder="1234" required="required" maxlength="4"/>
+                            <input type="text" name="postcode" id="postcode" placeholder="1234" required="required" maxlength="4" pattern="^\d{4}$"/>
                     </p>
 
+                </div>
+                   
             </fieldset>
 
 
-            <fieldset>
+            <fieldset data-step="4" disabled>
                 <legend> Contact Information </legend>
                     <!-- EMAIL ADRESS -->
                     <p>
-                        <label for="email">Email Adress</label>
-                            <input type="text" name="email" id="email" required="required" placeholder="text@provider"/>
+                        <label for="email">Email Address</label>
+                            <input type="text" name="email" id="email" required="required" placeholder="something@something.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
                     </p>
 
                     <!-- PHONE NUMBER -->
                     <p>
                         <label for="phoneNumber">Phone Number</label>
-                            <input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="123456789"/>
+                            <input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="123456789" pattern="^(\(0[2-8]\)|0[2-8])\s?\d{4}\s?\d{4}$" />
                     </p>
 
             </fieldset>
 
 
-            <fieldset>
+            <fieldset data-step="5" disabled>
                 <legend> Other Important Information </legend>
                     <!-- REQUIRED TECHNICAL LIST-->
+
                     <p>
                         <label for="requiredTechnicalList">Required Technical Skills</label>
                             <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required="required"/>
@@ -154,8 +188,8 @@
 
             </fieldset>
 
-            <input type= "submit" value="Register"/>
-            <input type= "reset" value="Reset Form"/>
+            <input type= "submit" value="Register">
+            <input type= "reset" value="Reset Form">
 
         </form>
     </main>

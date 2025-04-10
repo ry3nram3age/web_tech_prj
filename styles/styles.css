@@ -6,12 +6,15 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
 }
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 main {
@@ -30,6 +33,13 @@ header {
     width: 18rem;
     max-width: 100%;
     margin: 0;
+    padding-right: 0.1rem;
+}
+
+#accessibility_logo {
+    width: 2em;
+    max-width: 100%;
+    margin: 0;
     padding-right: 2rem;
 }
 
@@ -44,10 +54,10 @@ header {
 .home-navlinks {
     position: relative;
     text-decoration: none;
-    color: white;
     font-size: 1.2rem;
     padding: 1rem;
     border-top: 2px solid transparent;
+    color: white;
 }
 
 .home-navlinks:after {
@@ -67,13 +77,11 @@ header {
 
 footer {
     background: linear-gradient(to right, #292929, #3b3b3b);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
-    padding: 3rem;
-    border-top: 2px white solid;
-
+    padding: 1.5rem;
+    text-align: center;
+    color: #ccc;
+    border-top: 1px solid white;
+    text-decoration: none;
 }
 
 main {
@@ -85,14 +93,235 @@ main {
     color: white;
 }
 
+/* Animation Keyframe */
 
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-intro {
+    text-align: center;
+    margin-top: 5rem;
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.hero-intro h1 {
+    font-size: 2.5rem;
+    color: #ff6600;
+    margin-bottom: 1rem;
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.hero-intro span {
+    color: #ffffff;
+}
+
+.hero-intro p {
+    font-size: 1.2rem;
+    color: #ccc;
+    animation-delay: 0.3s;
+
+
+}
 /* 
 About HTML Styling Section
 */
+
 /* 
 Jobs HTML Styling Page
 */
+h1, h2, h3, h4, h5{
+    color: #ff6600;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+h4, h5 {
+    font-weight: 500;
+}
+
+
+#jobs nav a:hover {
+    border-bottom: 1px solid #ff6600;
+}
+
+#jobs-apply {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#cybersecurity_specialist_position {
+    border: #ff6600 solid 3px;
+}
+
+#investigation_team_leader_position {
+    border: #ff6600 solid 3px;
+}
+
+#jobs-list {
+    padding-bottom: 1rem;
+}
+
+#jobs-apply {
+    padding-bottom: 1rem;
+}
+
+#cybersecurity_specialist_position {
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+
+#investigation_team_leader_position {
+    animation: fadeSlideIn 1s ease-out forwards;
+    margin-top: 0.5rem;
+}
 
 /* 
 Apply HTML Styling Page
 */
+
+#apply-title {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color : #1e1e1e;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#form, section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+fieldset {
+    border: 1px solid #555;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    background-color: #1c1c1c1c;
+    border-left: 4px solid #ff6600;
+}
+
+legend {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ff6600;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+    width: 98%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+input[type="submit"], input[type="reset"]{
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #ff6600;
+    background-color: #333
+}
+
+input, select, textarea, button {
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #1e1e1e;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+fieldset[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%)
+}
+
+form fieldset {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#footer-items {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+#footer-items:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+#apply-title, form {
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+/* Mobile and Tablet Responsivness */
+@media (max-width: 768px) {
+    #home-navigation {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    form, section {
+        padding: 1rem;
+    }
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+    }
+}
