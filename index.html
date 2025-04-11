@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Page metadata and links to external styles and fonts -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- AOS Animation Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- External stylesheet for page styling -->
     <link href="styles/styles.css" rel="stylesheet">
+
+    <!-- Google Fonts: Poppins for a modern, clean look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <title>Welcome to Data Nexus</title>
 </head>
 <body>
+
+    <!-- Header section containing logo and navigation menu -->
     <header>
+        <!-- Clickable logo linking back to the homepage -->
+        <a href="index.html">
+            <img src="images/Data_Nexus_Logo-Photoroom.png" id="home-logo" alt="Data Nexus Official Logo">
+        </a>
 
-        <a href="index.html"><img src="images/Data_Nexus_Logo-Photoroom.png" id="home-logo" alt="Data Nexus Official Logo"></a>
-        <img src="images/settings-3-128.png" id="accessibility_logo">
-
-
+        <!-- Navigation bar linking to site pages -->
         <nav id="home-navigation">
             <a href="index.html" class="home-navlinks">Home</a>
             <a href="jobs.html" class="home-navlinks">Jobs</a>
-            <a href="apply.html" class=home-navlinks>Apply</a>
+            <a href="apply.html" class="home-navlinks">Apply</a>
             <a href="about.html" class="home-navlinks">About</a>
         </nav>
-
     </header>
-    <main>
 
+    <!-- Main content area with a welcome message -->
+    <main>
         <section class="hero-intro">
             <h1>Welcome to <span>Data Nexus</span></h1>
             <p>Discover top cybersecurity roles tailored for future professionals</p>
         </section>
     </main>
+
+    <!-- Footer with project resource link -->
     <footer>
         <a href="#" id="footer-items">Jira Project</a>
     </footer>
+
+    <!-- AOS animation JavaScript library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Initializing AOS animations on page load -->
     <script>AOS.init();</script>
 </body>
 </html>

@@ -1,11 +1,19 @@
 /* 
-Index HTML Styling Section
+==========================================================
+GENERAL STYLING - Shared across all pages
+==========================================================
 */
 
-html, body {
-    height: 100%;
+/* Reset browser defaults and set box-sizing for consistency */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global font, text color, and layout */
+html, body {
+    height: 100%;
     font-family: 'Poppins', sans-serif;
     color: white;
     overflow-x: hidden;
@@ -14,43 +22,43 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    color: white;
 }
 
+/* Ensure main takes remaining space */
 main {
     flex: 1;
 }
 
+/* Sticky header bar with gradient background */
 header {
     display: flex;
     align-items: center;
     background: linear-gradient(to right, #292929, #3b3b3b);
     padding: 1rem;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ff6600;
 }
 
+/* Logo inside header */
 #home-logo {
     width: 18rem;
     max-width: 100%;
-    margin: 0;
     padding-right: 0.1rem;
 }
 
-#accessibility_logo {
-    width: 2em;
-    max-width: 100%;
-    margin: 0;
-    padding-right: 2rem;
-}
-
+/* Navigation menu inside header */
 #home-navigation {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 16rem;
     flex-wrap: wrap;
     padding: 6 0rem;
 }
 
+/* Navigation link style */
 .home-navlinks {
     position: relative;
     text-decoration: none;
@@ -60,6 +68,7 @@ header {
     color: white;
 }
 
+/* Hover underline animation */
 .home-navlinks:after {
     content: "";
     position: absolute;
@@ -75,13 +84,13 @@ header {
     width: 100%;
 }
 
+/* Footer styling */
 footer {
     background: linear-gradient(to right, #292929, #3b3b3b);
     padding: 1.5rem;
     text-align: center;
     color: #ccc;
     border-top: 1px solid white;
-    text-decoration: none;
 }
 
 main {
@@ -93,8 +102,12 @@ main {
     color: white;
 }
 
-/* Animation Keyframe */
+/* Footer hover effect */
+#footer-items:hover {
+    text-decoration: underline;
+}
 
+/* Animation keyframes */
 @keyframes fadeSlideIn {
     0% {
         opacity: 0;
@@ -106,6 +119,14 @@ main {
     }
 }
 
+
+/* 
+==========================================================
+INDEX.HTML STYLING
+==========================================================
+*/
+
+/* Hero intro section */
 .hero-intro {
     text-align: center;
     margin-top: 5rem;
@@ -113,10 +134,9 @@ main {
 }
 
 .hero-intro h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
     color: #ff6600;
     margin-bottom: 1rem;
-    animation: fadeSlideIn 1s ease-out forwards;
 }
 
 .hero-intro span {
@@ -124,22 +144,96 @@ main {
 }
 
 .hero-intro p {
-    font-size: 1.2rem;
     color: #ccc;
     animation-delay: 0.3s;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
 }
-/* 
-About HTML Styling Section
-*/
+
 
 /* 
-Jobs HTML Styling Page
+==========================================================
+ABOUT.HTML STYLING
+==========================================================
 */
-h1, h2, h3, h4, h5{
+
+#about-main {
+    background: linear-gradient(to right, #292929, #3b3b3b);
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Content wrapper */
+#about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+    color: white;
+}
+
+/* Section headings */
+#about-container h2 {
+    color: #ff6600;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid #ff6600;
+    padding-bottom: 0.3rem;
+}
+
+#about-container h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ff6600;
+    margin-bottom: 2rem;
+}
+
+/* List and definition content */
+#about-container ol, 
+#about-container ul, 
+#about-container dl {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Team info table */
+#about-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #1e1e1e;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#about-container th, 
+#about-container td {
+    border: 1px solid #444;
+    padding: 1rem;
+    text-align: left;
+}
+
+#about-container th {
+    background-color: #ff6600;
+    color: white;
+}
+
+
+/* 
+==========================================================
+JOBS.HTML STYLING
+==========================================================
+*/
+
+/* All headings for job sections */
+h1, h2, h3, h4, h5 {
     color: #ff6600;
     margin-bottom: 0.5rem;
 }
 
+/* Specific sizes for hierarchy */
 h1 {
     font-size: 2rem;
     border-bottom: 2px solid #ff6600;
@@ -156,11 +250,12 @@ h4, h5 {
     font-weight: 500;
 }
 
-
+/* Jobs navigation hover style */
 #jobs nav a:hover {
     border-bottom: 1px solid #ff6600;
 }
 
+/* Job Apply Button */
 #jobs-apply {
     background-color: #ff6600;
     color: white;
@@ -171,63 +266,62 @@ h4, h5 {
     text-decoration: none;
 }
 
-#cybersecurity_specialist_position {
+/* Job Description Boxes */
+#cybersecurity_specialist_position,
+#investigation_team_leader_position {
     border: #ff6600 solid 3px;
+    animation: fadeSlideIn 1s ease-out forwards;
 }
 
 #investigation_team_leader_position {
-    border: #ff6600 solid 3px;
+    margin-top: 0.5rem;
 }
 
-#jobs-list {
-    padding-bottom: 1rem;
-}
-
+#jobs-list,
 #jobs-apply {
     padding-bottom: 1rem;
 }
 
-#cybersecurity_specialist_position {
-    animation: fadeSlideIn 1s ease-out forwards;
-}
-
-#investigation_team_leader_position {
-    animation: fadeSlideIn 1s ease-out forwards;
-    margin-top: 0.5rem;
-}
+/* Aside section styling */
 aside {
     display: block;
     float: right;
     margin: 2rem;
     border-style: double;
-    border-width: 0.4rem;   
+    border-width: 0.4rem;
     border-color: lime;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    animation: fadeSlideIn 1s ease-out forwards;
-    
     padding: 1%;
 }
-aside h3{   
+
+aside h3 {
     color: lime;
     text-align: center;
 }
-aside ol{
+
+aside ol {
     display: block;
 }
+
+
 /* 
-Apply HTML Styling Page
+==========================================================
+APPLY.HTML STYLING
+==========================================================
 */
 
+/* Title box at top of form */
 #apply-title {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     margin: 2rem auto;
-    background-color : #1e1e1e;
+    background-color: #1e1e1e;
     border-radius: 1rem;
     padding: 1rem;
     text-align: center;
 }
 
+/* Form layout and spacing */
 #form, section {
     padding: 2rem;
     max-width: 900px;
@@ -235,6 +329,7 @@ Apply HTML Styling Page
     padding-top: 1rem;
 }
 
+/* Form styling */
 form {
     max-width: 800px;
     margin: 0 auto;
@@ -243,6 +338,8 @@ form {
     border-radius: 1rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
+/* Fieldset styling */
 fieldset {
     border: 1px solid #555;
     padding: 1.5rem;
@@ -252,6 +349,7 @@ fieldset {
     border-left: 4px solid #ff6600;
 }
 
+/* Fieldset legend heading */
 legend {
     font-size: 1.4rem;
     font-weight: 600;
@@ -260,7 +358,11 @@ legend {
     margin-bottom: 1rem;
 }
 
-input[type="text"], input[type="email"], input[type="number"], textarea {
+/* Input fields */
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+textarea {
     width: 98%;
     padding: 0.8rem;
     margin-top: 0.5rem;
@@ -270,7 +372,9 @@ input[type="text"], input[type="email"], input[type="number"], textarea {
     color: white;
 }
 
-input[type="submit"], input[type="reset"]{
+/* Submit and reset buttons */
+input[type="submit"], 
+input[type="reset"] {
     background-color: #ff6600;
     color: white;
     border: none;
@@ -279,11 +383,14 @@ input[type="submit"], input[type="reset"]{
     cursor: pointer;
 }
 
-input:focus, textarea:focus {
+/* Input focus effect */
+input:focus, 
+textarea:focus {
     outline: 2px solid #ff6600;
-    background-color: #333
+    background-color: #333;
 }
 
+/* General input styling */
 input, select, textarea, button {
     transition: all 0.2s ease-in-out;
     font-size: 1rem;
@@ -295,49 +402,68 @@ input, select, textarea, button {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Disable unfilled fieldsets visually */
 fieldset[disabled] {
     opacity: 0.4;
     pointer-events: none;
-    filter: grayscale(100%)
+    filter: grayscale(100%);
 }
 
+/* Prevent extra spacing at top of form */
 form fieldset {
     margin-top: 0;
     padding-top: 0;
 }
 
-#footer-items {
-    color: #ff6600;
-    text-decoration: none;
-}
-
-#footer-items:hover {
-    text-decoration: underline;
-}
-
+/* List padding */
 ul {
     padding-left: 1.5rem;
 }
 
+/* List item spacing */
 li {
     margin-bottom: 0.5rem;
 }
 
+/* Apply animation to form and title */
 #apply-title, form {
     animation: fadeSlideIn 1s ease-out forwards;
 }
-/* Mobile and Tablet Responsivness */
+
+
+/* 
+==========================================================
+RESPONSIVE DESIGN (MOBILE)
+==========================================================
+*/
+
 @media (max-width: 768px) {
-    #home-navigation {
+    /* Stack header items vertically */
+    header {
         flex-direction: column;
-        gap: 1rem;
         align-items: center;
+        text-align: center;
     }
 
-    form, section {
-        padding: 1rem;
+    /* Stack nav links for small screens */
+    #home-navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding-top: 1rem 0;
     }
-    input[type="submit"], input[type="reset"] {
-        width: 100%;
+
+    .hero-intro h1 {
+        text-align: center;
+    }
+
+    .home-navlinks {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    #home-logo {
+        width: 12rem;
+        margin-bottom: 1rem;
     }
 }
