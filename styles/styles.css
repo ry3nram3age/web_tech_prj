@@ -201,7 +201,7 @@ aside {
     margin: 2rem;
     border-style: double;
     border-width: 0.4rem;   
-    border-color: limegreen;
+    border-color: lime;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     animation: fadeSlideIn 1s ease-out forwards;
     
