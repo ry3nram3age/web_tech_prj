@@ -149,32 +149,6 @@ INDEX.HTML STYLING
     font-size: clamp(1rem, 2.5vw, 1.4rem);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 
 ==========================================================
 ABOUT.HTML STYLING
@@ -242,7 +216,7 @@ table {
     margin-top: 2rem;
     background-color: #1e1e1e;
     color: white;
-    box-shadow: 0 0 20px rgba(255, 102, 0, 0.2);
+
     border-radius: 12px;
     overflow: hidden;
 }
@@ -298,20 +272,31 @@ th {
     object-fit: cover;     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.image-pair {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+  }
+  
+  .image-box {
+    text-align: center;
+    max-width: 45%;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .caption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ff6600;
+  }
+  
 
 /* 
 ==========================================================
