@@ -363,6 +363,7 @@ th {
     border-radius: 8px; /* Rounded corners for images */
     box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Shadow effect on images */
     margin-bottom: 0.5rem; /* Margin at the bottom of the image */
+    border: 2px solid black; /* black border */
 }
 
 /* Caption Styling for Image Item */
@@ -378,6 +379,8 @@ th {
     height: 600px; /* Fixed height for the images */
     object-fit: cover; /* Maintain aspect ratio and fill the area */
 }
+
+
 
 /* Image Pair Section Layout */
 .image-pair {
