@@ -383,6 +383,36 @@ input[type="reset"] {
     cursor: pointer;
 }
 
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ff6600;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff6600;
+}
+
+#apply-input-dob{
+    padding-top: 0.5em;
+}
+
 /* Input focus effect */
 input:focus, 
 textarea:focus {
@@ -428,6 +458,20 @@ li {
 /* Apply animation to form and title */
 #apply-title, form {
     animation: fadeSlideIn 1s ease-out forwards;
+}
+
+.gender-radio-group{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.apply_rdbuttons {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
 }
 
 
