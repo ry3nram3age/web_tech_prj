@@ -260,7 +260,43 @@ th {
     text-transform: uppercase;
 }
 
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border: 2px solid #ff6600;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+}
 
+.image-item {
+    text-align: center;
+    color: white;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    margin-bottom: 0.5rem;
+}
+
+.image-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.image-item img {
+    width: 100%;           
+    height: 600px;      
+    object-fit: cover;     
+}
 
 
 
