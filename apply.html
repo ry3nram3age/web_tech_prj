@@ -1,288 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
+    <!-- Metadata and responsive viewport setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to external CSS and Google Fonts -->
     <link href="styles/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Algolia Places.js for address suggestions -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/places.js@1.19.0">
     <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
 
+    <!-- Brief explanation of the page for search engines -->
+    <meta name="description" content="Submit your job application to Data Nexus by completing our secure and easy-to-use online form.">
 
- 
-    
+    <!-- Keywords related to job application and form content -->
+    <meta name="keywords" content="Data Nexus, job application, apply form, cybersecurity careers, online form, personal details, technical skills">
 
+    <!-- Author of the page -->
+    <meta name="author" content="Thomas Federico">
 
     <title>Data Nexus Application Portal</title>
 </head>
 
-
 <body>
 
-<!------ HEADER ----------------------------------------------------------------------------------->
+<!-- ========== HEADER ========== -->
+<header>
+    <!-- Company Logo linking to homepage -->
+    <a href="index.html">
+        <img src="images/Data_Nexus_Logo-Photoroom.png" id="home-logo" alt="Data Nexus Official Logo">
+    </a>
 
-    <header>
+    <!-- Navigation bar to different site pages -->
+    <nav id="home-navigation">
+        <a href="index.html" class="home-navlinks">Home</a>
+        <a href="jobs.html" class="home-navlinks">Jobs</a>
+        <a href="apply.html" class="home-navlinks">Apply</a>
+        <a href="about.html" class="home-navlinks">About</a>
+    </nav>
+</header>
 
-        <a href="index.html"><img src="images/Data_Nexus_Logo-Photoroom.png" id="home-logo" alt="Data Nexus Official Logo"></a>
+<!-- ========== MAIN CONTENT ========== -->
+<main>
 
+    <!-- Optional external JavaScript (form enhancements) -->
+    <script src="javascript/main.js"></script>
 
-        <nav id="home-navigation">
-            <a href="index.html" class="home-navlinks">Home</a>
-            <a href="jobs.html" class="home-navlinks">Jobs</a>
-            <a href="apply.html" class=home-navlinks>Apply</a>
-            <a href="about.html" class="home-navlinks">About</a>
-        </nav>
+    <!-- Introductory section for the form -->
+    <div id="apply-title">
+        <p>
+            <h1>Application Form</h1>
+        </p>
+        <p>
+            This is the application form page! <br>
+            All questions must be answered in full and correctly before submitting form.
+        </p>
+    </div>
 
-    </header>
+    <!-- ========== APPLICATION FORM ========== -->
+    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" id="jobApplicationForm">
 
-<!------ MAIN ------------------------------------------------------------------------------------->
-
-    <main>
-
-        <script src="javascript/main.js"></script>
-
-        <div id="apply-title">
+        <!-- Step 1: Job Reference Number -->
+        <fieldset data-step="1">
+            <legend>Job Reference Number</legend>
             <p>
-                <h1 style="font-size: 3rem;;">Application Form</h1>
+                <label for="jobReferenceNumber">Job Reference Number</label> 
+                <!-- Only 1–9 digits allowed -->
+                <input type="text" name="jobReferenceNumber" id="jobReferenceNumber" maxlength="9" pattern="\d{1,9}" required />
             </p>
-    
+        </fieldset>
+
+        <!-- Step 2: Personal Information -->
+        <fieldset data-step="2" disabled>
+            <legend>Personal Information</legend>
+
+            <!-- Name fields with alphabet-only patterns -->
             <p>
-                This is the application form page! <br>
-                All questions must be answered in full and correctly before submitting form.
+                <label for="firstName">First Name</label> 
+                <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,30}" maxlength="30" placeholder="Please enter your first name" required>
+
+                <label for="lastName">Last Name</label> 
+                <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,30}" maxlength="30" placeholder="Please enter your last name" required/>
             </p>
-        </div>
 
-       
+            <!-- Date of birth -->
+            <p>
+                <label for="dateOfBirth">Date of Birth</label> 
+                <input type="date" name="dateOfBirth" id="dateOfBirth" required>
+            </p>
 
-<!------ FORM ------------------------------------------------------------------------------------->
+            <!-- Gender radio buttons -->
+            <p>
+                <label for="gender">Gender</label><br>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="Male" required>
 
-        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" id="jobApplicationForm">
-            <fieldset data-step="1">
-                <legend>Job Reference Number</legend>
-              
-                    <!-- JOB REFERENCE NUMBER -->
-                    <p>
-                        <label for="jobReferenceNumber">Job Reference Number</label> 
-                            <input type="text" name= "jobReferenceNumber" id="jobReferenceNumber" required="required"/>
-                    </p>
-            </fieldset>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="Female">
 
+                <label for="other">Other</label>
+                <input type="radio" name="gender" id="other" value="Other">
+            </p>
+        </fieldset>
 
-            <fieldset data-step="2" disabled>
-                <legend> Personal Information </legend>
+        <!-- Step 3: Address Information -->
+        <fieldset data-step="3" disabled>
+            <legend>Address</legend>
 
-          
-                     <!-- FIRST NAME -->
-                    <!-- LAST NAME -->
-                    <p>
-                        <label for="firstName">First Name</label> 
-                            <input type="text" name= "firstName" id="firstName" required="required" maxlength="20" placeholder="Please enter first name">
+            <div class="apply-fields">
+                <!-- Street address -->
+                <p>
+                    <label for="address">Street Address</label> 
+                    <input type="text" name="address" id="streetAddress" placeholder="26 Lammington Drive" required/>
+                </p>
 
-                        <label for="lastName">Last Name</label> 
-                            <input type="text" name= "lastName" id="lastName" required="required" maxlength="20" placeholder="Please enter your last name"/>
-                    </p>
+                <!-- Suburb with validation -->
+                <p>
+                    <label for="suburb">Suburb / Town</label> 
+                    <input type="text" name="suburb" id="suburb" placeholder="Suburb" pattern="[A-Za-z\s'\-]{2,50}" maxlength="50" required/>
+                </p>
 
-                    <!-- DATE OF BIRTH -->
-                    <p>
-                        <label for="dateOfBirth">Date of Birth</label> 
-                            <input type="date" name= "dateOfBirth" id="dateOfBirth" required="required" placeholder="DD/MM/YYYY">
-                    </p>
+                <!-- State dropdown -->
+                <p>
+                    <label for="state">State</label>
+                    <select name="state" id="state" required>
+                        <option value="volvo">NSW</option>
+                        <option value="saab">VIC</option>
+                        <option value="mercedes">QLD</option>
+                        <option value="audi">WA</option>
+                        <option value="audi">SA</option>
+                        <option value="audi">TAS</option>
+                        <option value="audi">ACT</option>
+                        <option value="audi">NT</option>
+                    </select>
+                </p>
 
-                    <!-- GENDER -->
-                    <p>
-                        <label for="gender">Gender</label><br>
+                <!-- Postcode must be 4 digits -->
+                <p>
+                    <label for="postcode">Postcode</label>
+                    <input type="text" name="postcode" id="postcode" placeholder="1234" maxlength="4" pattern="^\d{4}$" required>
+                </p>
+            </div>
+        </fieldset>
 
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" id="male" value="Male">
-                        
-                        <label for="female">Female</label>
-                        <input type="radio" name="gender" id="female" value="Female">
-                        <br>
-                        <label for="other">Other</label>
-                        <input type="radio" name="gender" id="other" value="Other">
+        <!-- Step 4: Contact Information -->
+        <fieldset data-step="4" disabled>
+            <legend>Contact Information</legend>
 
-                    </p>
+            <!-- Email with HTML5 pattern validation -->
+            <p>
+                <label for="email">Email Address</label>
+                <input type="text" name="email" id="email" placeholder="something@something.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+            </p>
 
-          
-             
-            </fieldset>
-                   
-                
+            <!-- Australian phone number pattern -->
+            <p>
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="123456789" pattern="^(\(0[2-8]\)|0[2-8])\s?\d{4}\s?\d{4}$" required/>
+            </p>
+        </fieldset>
 
-            <fieldset data-step="3" disabled>
-                <legend>Address</legend>
+        <!-- Step 5: Skills and Additional Info -->
+        <fieldset data-step="5" disabled>
+            <legend>Other Important Information</legend>
 
-                <div class="apply-fields">
-                     <!-- STREET ADRESS -->
-                     <p>
-                        <label for="address">Street Address</label> 
-                            <input type="text" name= "address" id="streetAddress" required="required" placeholder="26 Lammington Drive"/>
-                    </p>
+            <p>
+                <label for="requiredTechnicalList">Required Technical Skills</label>
+                <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required/>
+            </p>
 
-                    <!-- SUBURB/TOWN -->
-                    <p>
-                        <label for="suburb">Suburb / Town</label> 
-                            <input type="text" name= "suburb" id="suburb" required="required" placeholder="Suburb"/>
-                    </p>
+            <p>
+                <label for="otherSkills">Other Skills</label>
+                <input type="text" name="otherSkills" id="otherSkills" required/>
+            </p>
+        </fieldset>
 
-                    <!-- STATE -->
-                    <p>
-                        <label for="state">State</label>
-                            <select name="state" id="state" required="required" placeholder="Victoria">
-                                <option value="volvo">NSW</option>
-                                <option value="saab">VIC</option>
-                                <option value="mercedes">QLD</option>
-                                <option value="audi">WA</option>
-                                <option value="audi">SA</option>
-                                <option value="audi">TAS</option>
-                                <option value="audi">ACT</option>
-                                <option value="audi">NT</option>
-                            </select>
-                    </p>
+        <!-- Submit and Reset buttons -->
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset Form">
+    </form>
+</main>
 
-                    <!-- POSTCODE -->
-                    <p>
-                        <label for="postcode">Postcode</label>
-                            <input type="text" name="postcode" id="postcode" placeholder="1234" required="required" maxlength="4" pattern="^\d{4}$"/>
-                    </p>
-
-                </div>
-                   
-            </fieldset>
-
-
-            <fieldset data-step="4" disabled>
-                <legend> Contact Information </legend>
-                    <!-- EMAIL ADRESS -->
-                    <p>
-                        <label for="email">Email Address</label>
-                            <input type="text" name="email" id="email" required="required" placeholder="text@provider" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-                    </p>
-
-                    <!-- PHONE NUMBER -->
-                    <p>
-                        <label for="phoneNumber">Phone Number</label>
-                            <input type="text" name="phoneNumber" id="phoneNumber" required="required" placeholder="123456789" pattern="^(\(0[2-8]\)|0[2-8])\s?\d{4}\s?\d{4}$" />
-                    </p>
-
-            </fieldset>
-
-
-            <fieldset data-step="5" disabled>
-                <legend> Other Important Information </legend>
-                    <!-- REQUIRED TECHNICAL LIST-->
-
-                    <p>
-                        <label for="requiredTechnicalList">Required Technical Skills</label>
-                            <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required="required"/>
-                    </p>
-
-                    <!-- OTHER SKILLS -->
-                    <p>
-                        <label for="otherSkills">Other Skills</label>
-                            <input type="text" name="otherSkills" id="otherSkills" required="required"/>
-                    </p>
-
-            </fieldset>
-
-            <input type= "submit" value="Register">
-            <input type= "reset" value="Reset Form">
-
-        </form>
-    </main>
-
-<!------ FOOTER ----------------------------------------------------------------------------------->
-
-    <footer>
-        <a href="#" id="footer-items">Jira Project</a>
-    </footer>
+<!-- ========== FOOTER ========== -->
+<footer>
+    <a href="#" id="footer-items">Jira Project</a>
+</footer>
 
 </body>
 </html>
-
-
-<!-------------------------------------------------------------------------------------------------
-
---- Job application page (apply.html) ---
-This page has a form that allows a potential candidate to register their interest in the advertised
-position. HTML5 data validation should be used to check the user’s input.
-The form will allow a potential applicant to fill in the following:
-
-
-    Field                           Format requirement        
-    
-    Job reference number            drop down selection including all jobs ref numbers
-
-Personal Info
-    First name                      max 20 alpha characters
-    Last name                       max 20 alpha characters
-    Date of birth                   dd/mm/yyyy
-    Gender                          radio inputs grouped using a fieldset and legend
-
-Adress
-    Street Address                  max 40 characters
-    Suburb/town                     max 40 characters
-    State                           drop down selection from
-                                    VIC,NSW,QLD,NT,WA,SA,TAS,ACT
-    Postcode                        exactly 4 digits based on States
-
-Contact Information
-    Email address                   validate format with regular expression & patterns
-    Phone number                    8 to 12 digits, or spaces
-
-Other important Information
-    Required technical list         checkbox inputs
-    Other skills                    textarea
-
-
-All inputs should have labels. All form values, except the "Other Skills" textarea are ‘required’ or
-have a default value (e.g. select and checkbox inputs). The user should not be able to submit the
-form if any of these required fields are blank or incorrectly filled.
-
----- Data Submission to Server ---
-The form should have a submit button labelled “Apply”. When this button is clicked the name-
-values from the associated form should be sent to the server using the post http method. The
-server action address is https://mercury.swin.edu.au/it000000/formtest.php. The server will then
-just echo back the name value pairs to the client. While nothing will be stored on the server in
-this part of the assignment (we will do this in Part 2) this will allow the form submission to be
-tested.
-
-
--------------------------------------------------------------------------------------------------
-
-When pushing to branch:
-
-    git add . 
-        (stages)
-    git commit -m "{msg}"
-        (commits to main branch)
-    git push origin {branch}
-        (pushes changes to {branch})
-
-
-When pushing to Main:
-    go to online github
-    new pull request
-    select my branch
-    select what changes u want
-    create pull request
-    wait for at least 2 people to approve
-    when that occours, click merge pull request and it goes to main.
-
-------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-The good luck ducky :)
-
-  __
-<(o )___
- ( ._> /
-  `---'   
-
--->
