@@ -55,7 +55,6 @@ header {
     justify-content: center;
     gap: 16rem;
     flex-wrap: wrap;
-    padding: 6 0rem;
 }
 
 /* Navigation link style */
@@ -149,75 +148,166 @@ INDEX.HTML STYLING
     font-size: clamp(1rem, 2.5vw, 1.4rem);
 }
 
-
 /* 
 ==========================================================
 ABOUT.HTML STYLING
 ==========================================================
 */
+/* About Section Title Styling */
+#about-title {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect around the title */
+    max-width: 800px; /* Maximum width for the title box */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    background-color: #1e1e1e; /* Dark background color */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 1rem; /* Padding inside the box */
+    text-align: center; /* Center text inside the box */
+}
 
+/* Main About Section Styling */
 #about-main {
-    background: linear-gradient(to right, #292929, #3b3b3b);
-    flex: 1;
-    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect around the main section */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    background-color: #1e1e1e; /* Dark background color */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 2rem; /* Padding inside the box */
+    text-align: center; /* Center text inside the box */
+    max-width: 1000px; /* Maximum width for the main section */
+    border: 3px solid #ff6600; /* Orange border around the section */
 }
 
-/* Content wrapper */
-#about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #1e1e1e;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
-    color: white;
+/* Styling for Ordered and Unordered Lists in Main Section */
+#about-main ol, 
+#about-main ul {
+    list-style-position: inside; /* Positioning list markers inside the list */
+    text-align: center; /* Center align the list items */
+    padding-left: 0; /* Remove left padding */
 }
 
-/* Section headings */
-#about-container h2 {
-    color: #ff6600;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    border-bottom: 1px solid #ff6600;
-    padding-bottom: 0.3rem;
+/* Body Styling */
+body {
+    background-color: #292929; /* Dark gray background */
+    margin: 0; /* Remove default body margin */
+    font-family: 'Poppins', sans-serif; /* Set font for the body */
+    color: white; /* White text color */
 }
 
-#about-container h1 {
-    font-size: 2.5rem;
-    border-bottom: 2px solid #ff6600;
-    margin-bottom: 2rem;
+/* Team Roles Section Layout */
+.team-roles {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 0.5rem 2rem; /* Gap between columns and rows */
+    max-width: 600px; /* Maximum width of the section */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    text-align: center; /* Center text in the section */
 }
 
-/* List and definition content */
-#about-container ol, 
-#about-container ul, 
-#about-container dl {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+/* Team Roles Definition Styling */
+.team-roles dt {
+    font-weight: bold; /* Bold text for team roles */
+    color: #ff6600; /* Orange color for the roles */
 }
 
-/* Team info table */
-#about-container table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 2rem;
-    background-color: #1e1e1e;
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
+.team-roles dd {
+    margin: 0; /* Remove default margin */
+    color: white; /* White text color for the descriptions */
 }
 
-#about-container th, 
-#about-container td {
-    border: 1px solid #444;
-    padding: 1rem;
-    text-align: left;
+/* Table Styling */
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 2rem; /* Vertical margin on top */
+    background-color: #1e1e1e; /* Dark background color */
+    color: white; /* White text color */
+    border-radius: 12px; /* Rounded corners for the table */
+    overflow: hidden; /* Prevent table content from overflowing */
 }
 
-#about-container th {
-    background-color: #ff6600;
-    color: white;
+/* Table Header and Cell Styling */
+th, td {
+    padding: 1.5rem; /* Padding inside table cells */
+    text-align: center; /* Center align text */
+    border-bottom: 1px solid #333; /* Light gray border between rows */
+}
+
+th {
+    background-color: #ff6600; /* Orange background for table headers */
+    color: white; /* White text color for headers */
+    font-weight: bold; /* Bold font weight for headers */
+    text-transform: uppercase; /* Uppercase text for headers */
+}
+
+/* Image Grid Layout */
+.image-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 1.5rem; /* Gap between grid items */
+    max-width: 800px; /* Maximum width for the grid */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    padding: 1rem; /* Padding inside the grid */
+    background-color: #1e1e1e; /* Dark background color */
+    border: 2px solid #ff6600; /* Orange border around the grid */
+    border-radius: 1rem; /* Rounded corners for the grid */
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3); /* Shadow effect around the grid */
+}
+
+/* Image Item Styling within the Grid */
+.image-item {
+    text-align: center; /* Center text in the image item */
+    color: white; /* White text color */
+}
+
+/* Image Styling */
+.image-item img {
+    width: 100%; /* Full width images */
+    height: auto; /* Automatic height based on aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Shadow effect on images */
+    margin-bottom: 0.5rem; /* Margin at the bottom of the image */
+}
+
+/* Caption Styling for Image Item */
+.image-item p {
+    margin-top: 0.5rem; /* Margin above the caption */
+    font-size: 1rem; /* Set font size for caption */
+    color: #ccc; /* Light gray text color for caption */
+}
+
+/* Larger Image Styling in the Grid */
+.image-item img {
+    width: 100%; /* Full width images */
+    height: 600px; /* Fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and fill the area */
+}
+
+/* Image Pair Section Layout */
+.image-pair {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the items horizontally */
+    gap: 2rem; /* Gap between the items */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+/* Image Box Styling in Image Pair */
+.image-box {
+    text-align: center; /* Center align text inside the image box */
+    max-width: 45%; /* Set maximum width for the image box */
+}
+
+/* Image Styling in Image Box */
+.image-box img {
+    width: 100%; /* Full width images */
+    height: auto; /* Automatic height based on aspect ratio */
+    border-radius: 12px; /* Rounded corners for images */
+}
+
+/* Caption Styling for Image Box */
+.caption {
+    margin-top: 0.5rem; /* Margin above the caption */
+    font-size: 1rem; /* Set font size for caption */
+    color: #ff6600; /* Orange color for caption text */
 }
 
 
@@ -256,7 +346,7 @@ h4, h5 {
 }
 
 /* Job Apply Button */
-#jobs-apply {
+#jobs-apply1 {
     background-color: #ff6600;
     color: white;
     border: none;
@@ -264,6 +354,7 @@ h4, h5 {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+    padding: 1rem;
 }
 
 /* Job Description Boxes */
@@ -277,30 +368,33 @@ h4, h5 {
     margin-top: 0.5rem;
 }
 
-#jobs-list,
-#jobs-apply {
-    padding-bottom: 1rem;
+#jobs-list, #jobs-apply2 {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1rem;
 }
 
 /* Aside section styling */
 aside {
     display: block;
     float: right;
-    margin: 2rem;
+    margin: 1rem;
     border-style: double;
-    border-width: 0.4rem;
+    border-width: 0.5rem;
     border-color: lime;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 1%;
+    padding: 2em;
+    animation: fadeSlideIn 1s ease-out forwards;
 }
 
 aside h3 {
     color: lime;
     text-align: center;
-}
-
-aside ol {
-    display: block;
 }
 
 
@@ -510,4 +604,17 @@ RESPONSIVE DESIGN (MOBILE)
         width: 12rem;
         margin-bottom: 1rem;
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
