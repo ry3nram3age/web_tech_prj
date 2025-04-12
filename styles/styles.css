@@ -86,11 +86,45 @@ header {
 /* Footer styling */
 footer {
     background: linear-gradient(to right, #292929, #3b3b3b);
-    padding: 1.5rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid #ff6600;
     text-align: center;
     color: #ccc;
-    border-top: 1px solid #ff6600;
-}
+    font-size: 0.95rem;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  #footer-items {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #footer-items:hover,
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
 
 main {
     background: linear-gradient(to right, #292929, #3b3b3b);
