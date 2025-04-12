@@ -55,7 +55,6 @@ header {
     justify-content: center;
     gap: 16rem;
     flex-wrap: wrap;
-    padding: 6 0rem;
 }
 
 /* Navigation link style */
@@ -256,7 +255,7 @@ h4, h5 {
 }
 
 /* Job Apply Button */
-#jobs-apply {
+#jobs-apply1 {
     background-color: #ff6600;
     color: white;
     border: none;
@@ -264,6 +263,7 @@ h4, h5 {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+    padding: 1rem;
 }
 
 /* Job Description Boxes */
@@ -278,29 +278,33 @@ h4, h5 {
 }
 
 #jobs-list,
-#jobs-apply {
-    padding-bottom: 1rem;
+#jobs-apply2 {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1rem;
 }
 
 /* Aside section styling */
 aside {
     display: block;
     float: right;
-    margin: 2rem;
+    margin: 1rem;
     border-style: double;
-    border-width: 0.4rem;
+    border-width: 0.5rem;
     border-color: lime;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 1%;
+    padding: 2em;
+    animation: fadeSlideIn 1s ease-out forwards;
 }
 
 aside h3 {
     color: lime;
     text-align: center;
-}
-
-aside ol {
-    display: block;
 }
 
 
