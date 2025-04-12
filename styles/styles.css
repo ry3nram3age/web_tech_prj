@@ -277,8 +277,7 @@ h4, h5 {
     margin-top: 0.5rem;
 }
 
-#jobs-list,
-#jobs-apply2 {
+#jobs-list, #jobs-apply2 {
     background-color: #ff6600;
     color: white;
     border: none;
