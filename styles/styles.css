@@ -641,32 +641,33 @@ input[type="reset"] {
     border-radius: 4px;
     cursor: pointer;
 }
-
-input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
+.gender-radio-group {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .apply-rdbuttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Style the radio buttons */
+  .apply-rdbuttons input[type="radio"] {
+    appearance: auto; /* allow default styling for accessibility */
     width: 18px;
     height: 18px;
-    border: 2px solid #ff6600;
-    border-radius: 50%;
-    background-color: transparent;
-    position: relative;
+    accent-color: #ff6600; /* orange when selected */
     cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
-
-input[type="radio"]:checked::before {
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #ff6600;
-}
+  }
+  
+  /* Optional: Style the labels */
+  .apply-rdbuttons label {
+    font-weight: 500;
+    color: #f0f0f0;
+    cursor: pointer;
+  }
 
 #apply-input-dob{
     padding-top: 0.5em;
@@ -733,6 +734,24 @@ li {
      gap: 0.5rem;
 }
 
+/* Style dropdowns to match dark theme */
+select {
+    width: 98%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    appearance: none; /* Removes default arrow styling */
+  }
+  
+  select:focus {
+    outline: 2px solid #ff6600;
+    background-color: #333;
+  }
 
 /* 
 ==========================================================
@@ -753,7 +772,6 @@ RESPONSIVE DESIGN (MOBILE)
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
-        padding-top: 1rem 0;
     }
 
     .hero-intro h1 {
