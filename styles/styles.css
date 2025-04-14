@@ -525,15 +525,15 @@ th {
     max-width: 45%; /* Set maximum width for the image box */
 }
 
+figure img {
+    padding-bottom: 10rem;
+}
+
 /* Image Styling in Image Box */
 .image-box img {
     width: 100%; /* Full width images */
     height: auto; /* Automatic height based on aspect ratio */
     border-radius: 12px; /* Rounded corners for images */
-}
-
-img {
-    padding-left: 10rem;
 }
 
 /* Caption Styling for Image Box */
@@ -982,15 +982,15 @@ img {
         padding: 1rem;
         box-sizing: border-box;
       }
-    }
-
-    .about-data-nexus-containers {
+      
+      .about-data-nexus-containers {
         width: 90%;
         max-width: 600px;
         text-align: center;
         box-sizing: border-box;
       }
-
+    
+}
 
 /* =============================
    ABOUT PAGE RESPONSIVENESS ONLY
@@ -1019,7 +1019,7 @@ img {
     }
 
     #about-main table td,
-#about-main table th {
+    #about-main table th {
   white-space: nowrap;
   padding: 0.5rem;
   text-align: center;
