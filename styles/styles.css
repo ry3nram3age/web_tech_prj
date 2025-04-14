@@ -532,6 +532,10 @@ th {
     border-radius: 12px; /* Rounded corners for images */
 }
 
+img {
+    padding-left: 10rem;
+}
+
 /* Caption Styling for Image Box */
 .caption {
     margin-top: 0.5rem; /* Margin above the caption */
