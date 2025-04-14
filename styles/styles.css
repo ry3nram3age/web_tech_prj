@@ -481,6 +481,10 @@ th {
     justify-content: space-between; 
 }
 
+#apply-image img {
+    padding-left: 10rem;
+}
+
 /* Adjust Image Grid to fit in right column */
 .right-column .image-grid {
     margin: 0;
@@ -989,6 +993,49 @@ img {
         text-align: center;
         box-sizing: border-box;
       }
+
+      /* ABOUT FIRST SECTION CLEANUP */
+#about-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ff6600;
+  }
+  
+  #about-contained h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ff6600;
+  }
+  
+  #about-contained ul,
+  #about-contained ol,
+  #about-contained p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  
+  #about-contained li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Optional: give tutor name space */
+  #about-contained p {
+    margin-top: 0;
+    font-weight: 500;
+  }
+  
+  /* Keep containers spaced out from border */
+  #about-contained {
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 95%;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+  }
     
 }
 
