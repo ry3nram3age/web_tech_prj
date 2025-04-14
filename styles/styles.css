@@ -616,7 +616,7 @@ h4, h5 {
     border-bottom: 1px solid #ff6600;
 }
 
-#jobs-apply1, #jobs-apply2 {
+.jobs-apply {
   background-color: #4169E1;
   color:white;
   border: none;
