@@ -1,31 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Basic Meta Tags -->
+    <!-- ========== META INFORMATION ========== -->
+    <!-- Character encoding and responsive scaling -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Page description and keywords -->
     <meta name="description" content="DataNexus's CyberSec Job availability and descriptions">
     <meta name="keywords" content="HTML, CSS">
 
-     <!-- USED CHATGPT TO ANALYSE THE REQUIREMENTS, TO MAKE SURE WE COVERED EVERYTHING NEEDED BY THE ASSIGHMENT-->
-    <meta name="author" content="Max Dinon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- USED CHATGPT TO ANALYSE THE REQUIREMENTS, TO MAKE SURE WE COVERED EVERYTHING NEEDED BY THE ASSIGNMENT -->
     
-    <!-- Stylesheets and Fonts -->
+    <!-- Author of the page -->
+    <meta name="author" content="Max Dinon">
+
+    <!-- ========== STYLESHEETS AND FONTS ========== -->
+    <!-- External CSS and Google Fonts -->
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <!-- Page Title -->
+    <!-- Page title shown in browser tab -->
     <title>Data Nexus Open Vacancies</title>
 </head>
 
 <body>
-    <!-- HEADER SECTION: Logo and Navigation Menu -->
+
+    <!-- ========== HEADER SECTION ========== -->
+    <!-- Contains the site logo and main navigation -->
     <header>
+        <!-- Logo linking back to homepage -->
         <a href="index.html">
             <img src="images/Data_Nexus_Logo-Photoroom.png" id="home-logo" alt="Data Nexus Official Logo">
         </a>
+
+        <!-- Main site navigation -->
         <nav id="home-navigation">
             <a href="index.html" class="home-navlinks">Home</a>
             <a href="jobs.html" class="home-navlinks">Jobs</a>
@@ -34,13 +44,14 @@
         </nav>
     </header>
 
-    <!-- MAIN CONTENT: Job Listings -->
+    <!-- ========== MAIN SECTION: JOB LISTINGS ========== -->
     <main>
         <section id="jobs">
-            <!-- Page Title -->
+
+            <!-- Jobs Page Heading -->
             <h1>Jobs</h1>
 
-            <!-- ASIDE: Why Work Here -->
+            <!-- ========== ASIDE: WHY WORK FOR US ========== -->
             <aside>
                 <h2>Why work for us?</h2>
                 <ol>
@@ -51,11 +62,11 @@
                 </ol>
             </aside>
 
-            <!-- CYBERSECURITY SPECIALIST POSITION -->
+            <!-- ========== JOB 1: CYBERSECURITY SPECIALIST ========== -->
             <section id="cybersecurity_specialist_position">
                 <h2 id="cybersecurity_specialist">Cybersecurity Specialist</h2>
 
-                <!-- Basic Info -->
+                <!-- Overview Info -->
                 <h3>Brief Description</h3>
                 <ul>
                     <li>Job Title: Cybersecurity Specialist</li>
@@ -98,27 +109,28 @@
                     <li>Experience with cloud security (AWS, Azure, GCP).</li>
                 </ul>
 
-                <!-- Languages -->
+                <!-- Language Requirements -->
                 <h4>Languages Required:</h4>
                 <ul>
                     <li>English (fluent, written and spoken).</li>
                     <li>Additional languages (Spanish, Mandarin) are a plus.</li>
                 </ul>
 
-                <!-- Apply Button -->
+                <!-- Apply Now Button -->
                 <a href="apply.html" id="jobs-apply1">APPLY</a>
             </section>
 
-            <!-- INVESTIGATION TEAM LEADER POSITION -->
+            <!-- ========== JOB 2: INVESTIGATION TEAM LEADER ========== -->
             <section id="investigation_team_leader_position">
                 <h2 id="investigation_team_leader">Investigation Team Leader</h2>
 
-                <!-- ChatGPT-assisted description -->
-                <!-- Prompt used: 
-                    Can you write a brief description for an Investigation Leader position within DataNexus's CyberSec small company. 
-                    Include job description, salary range, key responsibilities, essential and preferable qualifications, and required languages.
+                <!-- ChatGPT-assisted content generation -->
+                <!-- Prompt used:
+                     Can you write a brief description for an Investigation Leader position within DataNexus's CyberSec small company.
+                     Include job description, salary range, key responsibilities, essential and preferable qualifications, and required languages.
                 -->
 
+                <!-- Overview Info -->
                 <h3>Brief Description</h3>
                 <ul>
                     <li>Job Title: Investigation Team Leader</li>
@@ -128,9 +140,11 @@
                     <li>Job Reference ID: 00002</li>
                 </ul>
 
+                <!-- Role Summary -->
                 <h3>Job Description:</h3>
                 <p>The Investigation Leader will be responsible for overseeing cybersecurity investigations related to incident response, digital forensics, and threat analysis. They will lead a team to identify and mitigate cybersecurity threats while ensuring the integrity of digital evidence and maintaining a high standard of investigative practices.</p>
 
+                <!-- Responsibilities -->
                 <h3>Key Job Responsibilities:</h3>
                 <ul>
                     <li>Lead and manage cybersecurity investigations.</li>
@@ -141,6 +155,7 @@
                     <li>Stay updated on current trends.</li>
                 </ul>
 
+                <!-- Required Skills -->
                 <h3>Qualifications Required:</h3>
                 <h4>Essential:</h4>
                 <ul>
@@ -159,26 +174,28 @@
                     <li>Familiarity with malware analysis.</li>
                 </ul>
 
+                <!-- Language Requirements -->
                 <h3>Languages Required:</h3>
                 <ul>
                     <li>English (fluent, both written and spoken).</li>
                     <li>Additional languages (Spanish, French, Mandarin) are a plus.</li>
                 </ul>
 
-                <!-- Apply Button -->
+                <!-- Apply Now Button -->
                 <a href="apply.html" id="jobs-apply2">APPLY</a>
             </section>
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- ========== FOOTER SECTION ========== -->
+    <!-- Contains Jira link and contact info -->
     <footer>
         <div class="footer-content">
-          <a href="#" id="footer-items">Jira Project</a>
-          <p>Contact us at <a href="mailto:info@datanexus.com.au">info@datanexus.com.au</a></p>
-          <p>&copy; 2024 Data Nexus. All rights reserved.</p>
+            <a href="#" id="footer-items">Jira Project</a>
+            <p>Contact us at <a href="mailto:info@datanexus.com.au">info@datanexus.com.au</a></p>
+            <p>&copy; 2024 Data Nexus. All rights reserved.</p>
         </div>
-      </footer>
-</body>
+    </footer>
 
+</body>
 </html>
