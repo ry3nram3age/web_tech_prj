@@ -223,7 +223,9 @@ INDEX.HTML STYLING
   #webpage-navigation-info a {
     text-decoration: none;
   }
- 
+
+
+/* USED GEN AI for Inspiration and Development for Animation 
 /* Welcome Text Animation */
 @keyframes fadeUp {
     from {
@@ -894,6 +896,10 @@ img {
   ======================== */
   @media (max-width: 768px) {
     /* GENERAL STACKING & CENTERING */
+
+    header {
+        position: static;
+    }
     header,
     nav,
     main,
@@ -1052,6 +1058,10 @@ img {
 
     @media screen and (min-width: 769px) and (max-width: 1024px) {
 
+        * {
+            box-sizing: border-box;
+        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -1105,7 +1115,13 @@ img {
           display: block;
           overflow-x: auto;
           width: 100%;
-          box-sizing: border-bottom;
+          box-sizing: border-box;
         }
+
+        form, fieldset, input, select, section, .form-container {
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
+          }
 
       }
