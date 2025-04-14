@@ -325,9 +325,8 @@ ABOUT.HTML STYLING
 
 /* Main About Section Styling */
 #about-main {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect around the main section */
+    background: linear-gradient(to right, #292929, #3b3b3b); /* Shadow effect around the main section */
     margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
-    background-color: #1e1e1e; /* Dark background color */
     border-radius: 1rem; /* Rounded corners */
     padding: 2rem; /* Padding inside the box */
     text-align: center; /* Center text inside the box */
@@ -345,7 +344,7 @@ ABOUT.HTML STYLING
 
 /* Body Styling */
 body {
-    background-color: #292929; /* Dark gray background */
+    background: linear-gradient(to right, #292929, #3b3b3b);
     margin: 0; /* Remove default body margin */
     font-family: 'Poppins', sans-serif; /* Set font for the body */
     color: white; /* White text color */
