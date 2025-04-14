@@ -3,9 +3,6 @@
 GENERAL STYLING - Shared across all pages
 ==========================================================
 */
-
-
-
 /* Global font, text color, and layout */
 html, body {
     height: 100%;
@@ -203,6 +200,7 @@ INDEX.HTML STYLING
   }
 
   .home-info-sections {
+    display: inline-table;
     background-color: #111;
     color: white;
     border: 2px solid #ff6600;
@@ -526,11 +524,7 @@ th {
 /* Image Box Styling in Image Pair */
 .image-box {
     text-align: center; /* Center align text inside the image box */
-    max-width: 45%; /* Set maximum width for the image box */
-}
-
-figure img {
-    padding-bottom: 10rem;
+    max-width: 85%; /* Set maximum width for the image box */
 }
 
 /* Image Styling in Image Box */
@@ -552,6 +546,7 @@ figure img {
 }
 
 .about-data-nexus-containers {
+    display: inline-table;
     background-color: #111;
     color: white;
     border: 2px solid #ff6600;
@@ -986,8 +981,9 @@ img {
         padding: 1rem;
         box-sizing: border-box;
       }
-      
-      .about-data-nexus-containers {
+    }
+
+    .about-data-nexus-containers {
         width: 90%;
         max-width: 600px;
         text-align: center;
@@ -996,48 +992,47 @@ img {
 
       /* ABOUT FIRST SECTION CLEANUP */
 #about-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #ff6600;
-  }
-  
-  #about-contained h2 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #ff6600;
-  }
-  
-  #about-contained ul,
-  #about-contained ol,
-  #about-contained p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-  }
-  
-  #about-contained li {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Optional: give tutor name space */
-  #about-contained p {
-    margin-top: 0;
-    font-weight: 500;
-  }
-  
-  /* Keep containers spaced out from border */
-  #about-contained {
-    padding: 1.5rem;
-    margin: 1rem auto;
-    max-width: 95%;
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-  }
-    
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ff6600;
 }
+
+#about-contained h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ff6600;
+}
+
+#about-contained ul,
+#about-contained ol,
+#about-contained p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+#about-contained li {
+  margin-bottom: 0.5rem;
+}
+
+/* Optional: give tutor name space */
+#about-contained p {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+/* Keep containers spaced out from border */
+#about-contained {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 95%;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+}
+    
 
 /* =============================
    ABOUT PAGE RESPONSIVENESS ONLY
@@ -1066,7 +1061,7 @@ img {
     }
 
     #about-main table td,
-    #about-main table th {
+#about-main table th {
   white-space: nowrap;
   padding: 0.5rem;
   text-align: center;
