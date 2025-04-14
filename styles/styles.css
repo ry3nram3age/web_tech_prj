@@ -390,7 +390,7 @@ th, td {
 }
 
 th {
-    background-color: #ff6600; /* Orange background for table headers */
+    background-color: #4169E1; /* Orange background for table headers */
     color: white; /* White text color for headers */
     font-weight: bold; /* Bold font weight for headers */
     text-transform: uppercase; /* Uppercase text for headers */
@@ -585,7 +585,9 @@ th {
 JOBS.HTML STYLING
 ==========================================================
 */
-
+* {
+  line-height: 1.7rem;
+}
 /* All headings for job sections */
 h1, h2, h3, h4, h5 {
     color: #ff6600;
@@ -614,10 +616,9 @@ h4, h5 {
     border-bottom: 1px solid #ff6600;
 }
 
-#jobs-apply1,
-#jobs-apply2 {
-  background-color: #ff6600;
-  color: white;
+#jobs-apply1, #jobs-apply2 {
+  background-color: #4169E1;
+  color:white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -638,16 +639,7 @@ h4, h5 {
     margin-top: 0.5rem;
 }
 
-#jobs-apply-1, #jobs-apply2 {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 1rem;
-}
+
 
 /* Aside section styling */
 aside {
@@ -656,20 +648,20 @@ aside {
     margin: 1rem;
     border-style: double;
     border-width: 0.5rem;
-    border-color: lime;
+    border-color: #ff6600;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 2em;
     animation: fadeSlideIn 1s ease-out forwards;
 }
 
-aside h3 {
-    color: lime;
+aside h2 {
+    color: #ff6600;
     text-align: center;
 }
 
 
 /* 
-==========================================================
+============================= =============================
 APPLY.HTML STYLING
 ==========================================================
 */
@@ -740,7 +732,7 @@ textarea {
 /* Submit and reset buttons */
 input[type="submit"], 
 input[type="reset"] {
-    background-color: #ff6600;
+    background-color: #4169E1;
     color: white;
     border: none;
     padding: 0.8rem 2rem;
