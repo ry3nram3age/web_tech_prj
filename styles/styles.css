@@ -972,8 +972,25 @@ img {
       padding: 1.5rem 1rem;
     }
 
-    
-}
+    #about-information-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+        margin: 2rem auto;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+    }
+
+    .about-data-nexus-containers {
+        width: 90%;
+        max-width: 600px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
 
 /* =============================
    ABOUT PAGE RESPONSIVENESS ONLY
