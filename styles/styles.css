@@ -179,6 +179,7 @@ INDEX.HTML STYLING
     font-size: clamp(1.8rem, 4vw, 3rem);
     color: #ff6600;
     margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
   
   #hero-intro span {
@@ -425,6 +426,7 @@ th {
     box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Shadow effect on images */
     margin-bottom: 0.5rem; /* Margin at the bottom of the image */
     border: 2px solid black; /* black border */
+    paddin
 }
 
 /* Caption Styling for Image Item */
@@ -441,14 +443,8 @@ th {
     object-fit: cover; /* Maintain aspect ratio and fill the area */
 }
 
-/* Two Column Container */
-.two-column-container {
-    display: flex; /* Use flexbox layout */
-    justify-content: space-between; /* Space between columns */
-    gap: 2rem; /* Gap between columns */
-    margin: 2rem 0; /* Vertical margin */
-    align-items: stretch; /* This makes columns equal height */
-}
+img 
+
 
 /* Left and Right Columns */
 #about-team_location-container,
