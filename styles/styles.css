@@ -426,7 +426,6 @@ th {
     box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Shadow effect on images */
     margin-bottom: 0.5rem; /* Margin at the bottom of the image */
     border: 2px solid black; /* black border */
-    paddin
 }
 
 /* Caption Styling for Image Item */
@@ -443,7 +442,6 @@ th {
     object-fit: cover; /* Maintain aspect ratio and fill the area */
 }
 
-img 
 
 
 /* Left and Right Columns */
