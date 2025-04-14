@@ -20,6 +20,8 @@
     <!-- Keywords related to job application and form content -->
     <meta name="keywords" content="Data Nexus, job application, apply form, cybersecurity careers, online form, personal details, technical skills">
 
+     <!-- USED CHATGPT TO ANALYSE THE REQUIREMENTS, TO MAKE SURE WE COVERED EVERYTHING NEEDED BY THE ASSIGHMENT-->
+
     <!-- Author of the page -->
     <meta name="author" content="Thomas Federico">
 
@@ -52,13 +54,11 @@
 
     <!-- Introductory section for the form -->
     <div id="apply-title">
-        <p>
-            <h1>Application Form</h1>
-        </p>
-        <p>
+        
+        <h1>Application Form</h1>
             This is the application form page! <br>
             All questions must be answered in full and correctly before submitting form.
-        </p>
+
     </div>
 
     <!-- ========== APPLICATION FORM ========== -->
@@ -67,115 +67,123 @@
         <!-- Step 1: Job Reference Number -->
         <fieldset data-step="1">
             <legend>Job Reference Number</legend>
-            <p>
-                <label for="jobReferenceNumber">Job Reference Number</label> 
-                <!-- Only 1–9 digits allowed -->
-                <input type="text" name="jobReferenceNumber" id="jobReferenceNumber" maxlength="9" pattern="\d{1,9}" required />
-            </p>
+            <select name="jobReferenceNumber" id="jobReferenceNumber" required>
+                <option value="">-- Select Reference --</option>
+                <option value="00001">00001 - Cybersecurity Specialist</option>
+                <option value="00002">00002 - Investigation Team Leader</option>
+              </select>
         </fieldset>
 
         <!-- Step 2: Personal Information -->
-        <fieldset data-step="2" disabled>
+        <fieldset data-step="2">
             <legend>Personal Information</legend>
 
             <!-- Name fields with alphabet-only patterns -->
-            <p>
+            <div id="apply-input-fn">
                 <label for="firstName">First Name</label> 
-                <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,30}" maxlength="30" placeholder="Please enter your first name" required>
+                <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,30}" maxlength="30" placeholder="Please enter your first name" value="" required>
+            </div>
 
+            <div id="apply-first-ln">
                 <label for="lastName">Last Name</label> 
-                <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,30}" maxlength="30" placeholder="Please enter your last name" required/>
-            </p>
+                <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,30}" maxlength="30" placeholder="Please enter your last name" value="" required>
+            </div>
 
             <!-- Date of birth -->
-            <p>
+            <div id="apply-input-dob">
                 <label for="dateOfBirth">Date of Birth</label> 
-                <input type="date" name="dateOfBirth" id="dateOfBirth" required>
-            </p>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" value="" required>
+            </div>
 
             <!-- Gender radio buttons -->
-            <p>
-                <label for="gender">Gender</label><br>
-                <label for="male">Male</label>
-                <input type="radio" name="gender" id="male" value="Male" required>
-
-                <label for="female">Female</label>
-                <input type="radio" name="gender" id="female" value="Female">
-
-                <label for="other">Other</label>
-                <input type="radio" name="gender" id="other" value="Other">
-            </p>
+             <p>Gender</p>
+             <div class="gender-radio-group">
+                <div id="apply-input-male" class="apply-rdbuttons">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="Male" required>
+                </div>
+                <div id="apply-input-female" class="apply-rdbuttons">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+                </div>
+                <div id="apply-input-other" class="apply-rdbuttons">
+                    <label for="other">Other</label>
+                    <input type="radio" name="gender" id="other" value="Other">
+                </div>
+            </div>
+            
         </fieldset>
 
         <!-- Step 3: Address Information -->
-        <fieldset data-step="3" disabled>
+        <fieldset data-step="3">
             <legend>Address</legend>
 
             <div class="apply-fields">
                 <!-- Street address -->
                 <p>
                     <label for="address">Street Address</label> 
-                    <input type="text" name="address" id="streetAddress" placeholder="26 Lammington Drive" required/>
+                    <input type="text" name="address" id="address" placeholder="26 Lammington Drive" value="" required>
                 </p>
 
                 <!-- Suburb with validation -->
                 <p>
                     <label for="suburb">Suburb / Town</label> 
-                    <input type="text" name="suburb" id="suburb" placeholder="Suburb" pattern="[A-Za-z\s'\-]{2,50}" maxlength="50" required/>
+                    <input type="text" name="suburb" id="suburb" placeholder="Suburb" pattern="[A-Za-z\s'\-]{2,50}" maxlength="50" value="" required>
                 </p>
 
                 <!-- State dropdown -->
                 <p>
                     <label for="state">State</label>
                     <select name="state" id="state" required>
-                        <option value="volvo">NSW</option>
-                        <option value="saab">VIC</option>
-                        <option value="mercedes">QLD</option>
-                        <option value="audi">WA</option>
-                        <option value="audi">SA</option>
-                        <option value="audi">TAS</option>
-                        <option value="audi">ACT</option>
-                        <option value="audi">NT</option>
+                        <option value="" disabled selected>-- Select State --</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NT">NT</option>
                     </select>
                 </p>
 
                 <!-- Postcode must be 4 digits -->
                 <p>
                     <label for="postcode">Postcode</label>
-                    <input type="text" name="postcode" id="postcode" placeholder="1234" maxlength="4" pattern="^\d{4}$" required>
+                    <input type="text" name="postcode" id="postcode" placeholder="1234" maxlength="4" pattern="^\d{4}$" value="" required>
                 </p>
             </div>
         </fieldset>
 
         <!-- Step 4: Contact Information -->
-        <fieldset data-step="4" disabled>
+        <fieldset data-step="4">
             <legend>Contact Information</legend>
 
             <!-- Email with HTML5 pattern validation -->
             <p>
                 <label for="email">Email Address</label>
-                <input type="text" name="email" id="email" placeholder="something@something.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+                <input type="text" name="email" id="email" placeholder="something@something.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="" required>
             </p>
 
             <!-- Australian phone number pattern -->
             <p>
                 <label for="phoneNumber">Phone Number</label>
-                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="123456789" pattern="^(\(0[2-8]\)|0[2-8])\s?\d{4}\s?\d{4}$" required/>
+                <input type="text" name="phoneNumber" id="phoneNumber" placeholder="123456789" pattern="[0-9\s]{8,12}" value="" required>
             </p>
         </fieldset>
 
         <!-- Step 5: Skills and Additional Info -->
-        <fieldset data-step="5" disabled>
+        <fieldset data-step="5">
             <legend>Other Important Information</legend>
 
             <p>
                 <label for="requiredTechnicalList">Required Technical Skills</label>
-                <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" required/>
+                <input type="text" name="requiredTechnicalList" id="requiredTechnicalList" value="" required>
             </p>
 
             <p>
                 <label for="otherSkills">Other Skills</label>
-                <input type="text" name="otherSkills" id="otherSkills" required/>
+                <input type="text" name="otherSkills" id="otherSkills" value="" required>
             </p>
         </fieldset>
 
@@ -187,8 +195,11 @@
 
 <!-- ========== FOOTER ========== -->
 <footer>
-    <a href="#" id="footer-items">Jira Project</a>
-</footer>
-
+    <div class="footer-content">
+      <a href="#" id="footer-items">Jira Project</a>
+      <p>Contact us at <a href="mailto:info@datanexus.com.au">info@datanexus.com.au</a></p>
+      <p>&copy; 2024 Data Nexus. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

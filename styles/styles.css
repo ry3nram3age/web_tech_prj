@@ -4,12 +4,7 @@ GENERAL STYLING - Shared across all pages
 ==========================================================
 */
 
-/* Reset browser defaults and set box-sizing for consistency */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* Global font, text color, and layout */
 html, body {
@@ -17,6 +12,11 @@ html, body {
     font-family: 'Poppins', sans-serif;
     color: white;
     overflow-x: hidden;
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
@@ -42,6 +42,8 @@ header {
     border-bottom: 1px solid #ff6600;
 }
 
+
+
 /* Logo inside header */
 #home-logo {
     width: 18rem;
@@ -53,7 +55,7 @@ header {
 #home-navigation {
     display: flex;
     justify-content: center;
-    gap: 16rem;
+    gap: 15rem;
     flex-wrap: wrap;
 }
 
@@ -65,7 +67,9 @@ header {
     padding: 1rem;
     border-top: 2px solid transparent;
     color: white;
+    padding-right: 20px;
 }
+
 
 /* Hover underline animation */
 .home-navlinks:after {
@@ -86,11 +90,45 @@ header {
 /* Footer styling */
 footer {
     background: linear-gradient(to right, #292929, #3b3b3b);
-    padding: 1.5rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid #ff6600;
     text-align: center;
     color: #ccc;
-    border-top: 1px solid white;
-}
+    font-size: 0.95rem;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  #footer-items {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #footer-items:hover,
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
 
 main {
     background: linear-gradient(to right, #292929, #3b3b3b);
@@ -125,28 +163,145 @@ INDEX.HTML STYLING
 ==========================================================
 */
 
-/* Hero intro section */
-.hero-intro {
+/* Hero Section */
+#hero-intro {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 5rem;
-    animation: fadeSlideIn 1s ease-out forwards;
-}
-
-.hero-intro h1 {
+    animation: slideHeroUp 1s ease forwards;
+    animation-delay: 2s; /* Wait for text to finish animating */
+  }
+  
+  #hero-intro h1 {
     font-size: clamp(1.8rem, 4vw, 3rem);
     color: #ff6600;
     margin-bottom: 1rem;
-}
-
-.hero-intro span {
+  }
+  
+  #hero-intro span {
     color: #ffffff;
+  }
+  
+  #hero-intro p {
+    color: #ccc;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+  }
+
+  #webpage-navigation-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    margin: -26rem auto 2rem auto; /* Pulls section upward */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  .home-info-sections {
+    background-color: #111;
+    color: white;
+    border: 2px solid #ff6600;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+    padding: 2rem;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    opacity: 1; /* Make sure it's visible */
+    transition: all 0.3s ease;
+  }
+  
+  .home-info-sections:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 102, 0, 0.3);
+  }
+
+  #webpage-navigation-info a {
+    text-decoration: none;
+  }
+ 
+/* Welcome Text Animation */
+@keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* previously 40px */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  .delay-1 {
+    animation-delay: 0.5s;
+  }
+  
+  /* Move the hero section upward after the intro animation */
+  @keyframes slideHeroUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-200px); /* Moves up toward navbar */
+    }
+  }
+  
+  /* Box Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  @keyframes fadeAndPop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.hero-intro p {
-    color: #ccc;
-    animation-delay: 0.3s;
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
+/* Shared animation style for boxes */
+.box-fade-in {
+  opacity: 0;
+  animation: fadeAndPop 1s ease forwards;
 }
+
+/* Staggered delays */
+.box-delay-1 {
+  animation-delay: 2.5s; /* Start after hero slide */
+}
+.box-delay-2 {
+  animation-delay: 3s;
+}
+.box-delay-3 {
+  animation-delay: 3.5s;
+}
+  .delay-2 { animation-delay: 2.5s; }
+  .delay-3 { animation-delay: 3s; }
+  .delay-4 { animation-delay: 3.5s; }
+
 
 
 /* 
@@ -154,70 +309,270 @@ INDEX.HTML STYLING
 ABOUT.HTML STYLING
 ==========================================================
 */
+/* About Section Title Styling */
+#about-title {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect around the title */
+    max-width: 800px; /* Maximum width for the title box */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    background-color: #1e1e1e; /* Dark background color */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 1rem; /* Padding inside the box */
+    text-align: center; /* Center text inside the box */
+}
 
+/* Main About Section Styling */
 #about-main {
-    background: linear-gradient(to right, #292929, #3b3b3b);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect around the main section */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    background-color: #1e1e1e; /* Dark background color */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 2rem; /* Padding inside the box */
+    text-align: center; /* Center text inside the box */
+    max-width: 1000px; /* Maximum width for the main section */
+    border: 3px solid #ff6600; /* Orange border around the section */
+}
+
+/* Styling for Ordered and Unordered Lists in Main Section */
+#about-main ol, 
+#about-main ul {
+    list-style-position: inside; /* Positioning list markers inside the list */
+    text-align: center; /* Center align the list items */
+    padding-left: 0; /* Remove left padding */
+}
+
+/* Body Styling */
+body {
+    background-color: #292929; /* Dark gray background */
+    margin: 0; /* Remove default body margin */
+    font-family: 'Poppins', sans-serif; /* Set font for the body */
+    color: white; /* White text color */
+}
+
+/* Team Roles Section Layout */
+.team-roles {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 0.5rem 2rem; /* Gap between columns and rows */
+    max-width: 600px; /* Maximum width of the section */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    text-align: center; /* Center text in the section */
+}
+
+/* Team Roles Definition Styling */
+.team-roles dt {
+    font-weight: bold; /* Bold text for team roles */
+    color: #ff6600; /* Orange color for the roles */
+}
+
+.team-roles dd {
+    margin: 0; /* Remove default margin */
+    color: white; /* White text color for the descriptions */
+}
+
+/* Table Styling */
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-top: 2rem; /* Vertical margin on top */
+    background-color: #1e1e1e; /* Dark background color */
+    color: white; /* White text color */
+    border-radius: 12px; /* Rounded corners for the table */
+    overflow: hidden; /* Prevent table content from overflowing */
+}
+
+/* Table Header and Cell Styling */
+th, td {
+    padding: 1.5rem; /* Padding inside table cells */
+    text-align: center; /* Center align text */
+    border-bottom: 1px solid #333; /* Light gray border between rows */
+}
+
+th {
+    background-color: #ff6600; /* Orange background for table headers */
+    color: white; /* White text color for headers */
+    font-weight: bold; /* Bold font weight for headers */
+    text-transform: uppercase; /* Uppercase text for headers */
+}
+
+/* Image Grid Layout */
+.image-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 1.5rem; /* Gap between grid items */
+    max-width: 800px; /* Maximum width for the grid */
+    float: right;
+    margin: 2rem 0 2rem auto;
+    padding: 1rem; /* Padding inside the grid */
+    background-color: #1e1e1e; /* Dark background color */
+    border: 2px solid #ff6600; /* Orange border around the grid */
+    border-radius: 1rem; /* Rounded corners for the grid */
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3); /* Shadow effect around the grid */
+}
+
+/* Image Item Styling within the Grid */
+.image-item {
+    text-align: center; /* Center text in the image item */
+    color: white; /* White text color */
+}
+
+/* Image Styling */
+.image-item img {
+    width: 100%; /* Full width images */
+    height: auto; /* Automatic height based on aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Shadow effect on images */
+    margin-bottom: 0.5rem; /* Margin at the bottom of the image */
+    border: 2px solid black; /* black border */
+}
+
+/* Caption Styling for Image Item */
+.image-item p {
+    margin-top: 0.5rem; /* Margin above the caption */
+    font-size: 1rem; /* Set font size for caption */
+    color: #ccc; /* Light gray text color for caption */
+}
+
+/* Larger Image Styling in the Grid */
+.image-item img {
+    width: 100%; /* Full width images */
+    height: 600px; /* Fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and fill the area */
+}
+
+/* Two Column Container */
+.two-column-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space between columns */
+    gap: 2rem; /* Gap between columns */
+    margin: 2rem 0; /* Vertical margin */
+    align-items: stretch; /* This makes columns equal height */
+}
+
+/* Left and Right Columns */
+.left-column,
+.right-column {
     flex: 1;
-    padding: 2rem;
-}
-
-/* Content wrapper */
-#about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
+    min-width: 0;
     background-color: #1e1e1e;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
-    color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid #ff6600;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
-/* Section headings */
-#about-container h2 {
-    color: #ff6600;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    border-bottom: 1px solid #ff6600;
-    padding-bottom: 0.3rem;
+/* Left Column Specific Styling */
+.left-column {
+    background-color: #1e1e1e; /* Dark background */
+    padding: 1.5rem; /* Inner spacing */
+    border-radius: 1rem; /* Rounded corners */
+    border: 2px solid #ff6600; /* Orange border */
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3); /* Shadow */
 }
 
-#about-container h1 {
-    font-size: 2.5rem;
-    border-bottom: 2px solid #ff6600;
-    margin-bottom: 2rem;
+/* Right Column Specific Styling */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between heading and grid */
+    justify-content: space-between; 
 }
 
-/* List and definition content */
-#about-container ol, 
-#about-container ul, 
-#about-container dl {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Team info table */
-#about-container table {
+/* Adjust Image Grid to fit in right column */
+.right-column .image-grid {
+    margin: 0;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 2rem;
-    background-color: #1e1e1e;
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    flex-grow: 1; /* Allows grid to expand and fill space */
 }
 
-#about-container th, 
-#about-container td {
-    border: 1px solid #444;
+.right-column .image-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Prevents squishing while maintaining aspect ratio */
+    object-position: top; /* Focuses on faces if images are portraits */
+}
+
+/* Ensure lists in left column are properly aligned */
+.left-column ol,
+.left-column ul {
+    text-align: left; /* Align list items to the left */
+    padding-left: 1.5rem; /* Proper indentation */
+}
+
+.left-column li {
+    margin-bottom: 0.5rem; /* Space between list items */
+}
+
+
+/* Image Pair Section Layout */
+.image-pair {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the items horizontally */
+    gap: 2rem; /* Gap between the items */
+    margin: 2rem auto; /* Vertical margin of 2rem, centered horizontally */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+/* Image Box Styling in Image Pair */
+.image-box {
+    text-align: center; /* Center align text inside the image box */
+    max-width: 45%; /* Set maximum width for the image box */
+}
+
+/* Image Styling in Image Box */
+.image-box img {
+    width: 100%; /* Full width images */
+    height: auto; /* Automatic height based on aspect ratio */
+    border-radius: 12px; /* Rounded corners for images */
+}
+
+/* Caption Styling for Image Box */
+.caption {
+    margin-top: 0.5rem; /* Margin above the caption */
+    font-size: 1rem; /* Set font size for caption */
+    color: #ff6600; /* Orange color for caption text */
+}
+
+.paragraphs {
+    border-top: 1px solid #ff6600;
+}
+
+.about-data-nexus-containers {
+    background-color: #111;
+    color: white;
+    border: 2px solid #ff6600;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
     padding: 1rem;
-    text-align: left;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding-top: 20px;
 }
 
-#about-container th {
-    background-color: #ff6600;
-    color: white;
+.about-data-nexus-containers h2 {
+    margin-top: -5px;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+    transition: all 0.3s ease;
 }
+
+#about-information-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    opacity: 1; /* Make sure it's visible */
+}
+
+.about-data-nexus-containers:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 102, 0, 0.3);
+  }
 
 
 /* 
@@ -254,16 +609,17 @@ h4, h5 {
     border-bottom: 1px solid #ff6600;
 }
 
-/* Job Apply Button */
-#jobs-apply1 {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 1rem;
+#jobs-apply1,
+#jobs-apply2 {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
 }
 
 /* Job Description Boxes */
@@ -277,7 +633,7 @@ h4, h5 {
     margin-top: 0.5rem;
 }
 
-#jobs-list, #jobs-apply2 {
+#jobs-apply-1, #jobs-apply2 {
     background-color: #ff6600;
     color: white;
     border: none;
@@ -340,6 +696,7 @@ form {
     background-color: #1e1e1e;
     border-radius: 1rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
 }
 
 /* Fieldset styling */
@@ -384,6 +741,37 @@ input[type="reset"] {
     padding: 0.8rem 2rem;
     border-radius: 4px;
     cursor: pointer;
+}
+.gender-radio-group {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .apply-rdbuttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Style the radio buttons */
+  .apply-rdbuttons input[type="radio"] {
+    appearance: auto; /* allow default styling for accessibility */
+    width: 18px;
+    height: 18px;
+    accent-color: #ff6600; /* orange when selected */
+    cursor: pointer;
+  }
+  
+  /* Optional: Style the labels */
+  .apply-rdbuttons label {
+    font-weight: 500;
+    color: #f0f0f0;
+    cursor: pointer;
+  }
+
+#apply-input-dob{
+    padding-top: 0.5em;
 }
 
 /* Input focus effect */
@@ -433,40 +821,299 @@ li {
     animation: fadeSlideIn 1s ease-out forwards;
 }
 
-
-/* 
-==========================================================
-RESPONSIVE DESIGN (MOBILE)
-==========================================================
-*/
-
-@media (max-width: 768px) {
-    /* Stack header items vertically */
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* Stack nav links for small screens */
-    #home-navigation {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        padding-top: 1rem 0;
-    }
-
-    .hero-intro h1 {
-        text-align: center;
-    }
-
-    .home-navlinks {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-    }
-
-    #home-logo {
-        width: 12rem;
-        margin-bottom: 1rem;
-    }
+.gender-radio-group{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    margin-top: 0.5rem;
 }
+
+.apply_rdbuttons {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+/* Style dropdowns to match dark theme */
+select {
+    width: 98%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    appearance: none; /* Removes default arrow styling */
+  }
+  
+  select:focus {
+    outline: 2px solid #ff6600;
+    background-color: #333;
+  }
+
+/* ========================
+   GLOBAL STYLES
+======================== */
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Enable smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Make form elements responsive */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="date"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Make footer responsive */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Ensure home info cards are flexible by default */
+  .home-info-sections {
+    flex: 1 1 100%;
+    margin: 1rem auto;
+  }
+  
+  
+  /* ========================
+     RESPONSIVE DESIGN (max-width: 768px)
+  ======================== */
+  @media (max-width: 768px) {
+    /* GENERAL STACKING & CENTERING */
+    header,
+    nav,
+    main,
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    /* HEADER FIXES */
+    header {
+      padding: 0.5rem 1rem;
+    }
+  
+    #home-logo {
+      width: 10rem;
+      margin-bottom: 1rem;
+    }
+  
+    /* NAVIGATION STYLING */
+    #home-navigation {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    #home-navigation a {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+  
+    /* HOME BOX SECTIONS */
+    .home-info-sections {
+      width: 90%;
+      max-width: 400px;
+      margin: 1rem auto;
+    }
+  
+    /* FORM & FIELDSETS */
+    fieldset {
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+  
+    .apply-fields,
+    .gender-radio-group,
+    .apply-rdbuttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    /* RADIO BUTTON STACK */
+    .gender-radio-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* FOOTER */
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    
+}
+
+/* =============================
+   ABOUT PAGE RESPONSIVENESS ONLY
+   ============================= */
+   @media (max-width: 769px) and (max-width: 1024px) {
+    #about-main {
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+  
+    #about-contained {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    #about-main table {
+        display: block;
+        overflow-x: auto;
+        max-width: 100%;
+        border-collapse: collapse;
+        margin: 1rem auto;
+        box-sizing: border-box;
+    }
+
+    #about-main table td,
+#about-main table th {
+  white-space: nowrap;
+  padding: 0.5rem;
+  text-align: center;
+}
+  
+    #about-contained h1,
+    #about-contained h2,
+    #about-contained h3,
+    #about-contained p,
+    #about-contained ul,
+    #about-contained ol,
+    #about-contained dl,
+    #about-contained table {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+  
+    /* Prevent table overflow */
+    #about-contained table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+  
+    .image-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    .image-item img {
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .image-pair {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  
+    .image-box {
+      width: 90%;
+      padding: -2rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  
+    .caption,
+    .description {
+      text-align: center;
+    }
+  }
+
+
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+        img {
+            max-width: 100%;
+            height: auto;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        #about-contained, main, .image-grid, .image-pair, section {
+            max-width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+      
+  
+        header {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1rem;
+        }
+      
+        #home-logo {
+          width: 10rem; /* reduce logo size */
+          padding: 0;
+          margin: 0;
+          margin-left: 1rem;
+        }
+      
+        #home-navigation {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+      
+        main {
+          max-width: 95%;
+          margin: auto;
+          padding: 1rem;
+        }
+      
+        table {
+          display: block;
+          overflow-x: auto;
+          width: 100%;
+          box-sizing: border-bottom;
+        }
+
+      }

@@ -11,11 +11,13 @@
     <!-- Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <!-- Summary of the About Us page content -->
+    <!-- Summary of the About Us page content for SEO -->
     <meta name="description" content="Meet the Data Nexus team. Learn about our mission, team members, and what makes us a unique cybersecurity company.">
 
-    <!-- Keywords focusing on company information and team details -->
+    <!-- Keywords for SEO focusing on company and team details -->
     <meta name="keywords" content="Data Nexus team, about us, cybersecurity company, company mission, team members, fun facts, company background">
+
+     <!-- USED CHATGPT TO ANALYSE THE REQUIREMENTS, TO MAKE SURE WE COVERED EVERYTHING NEEDED BY THE ASSIGHMENT-->
 
     <!-- Author of the page -->
     <meta name="author" content="Ashley Jean">
@@ -39,30 +41,33 @@
             <a href="about.html" class="home-navlinks">About</a>
         </nav>
     </header>
-
-    <!-- ================= MAIN CONTENT ================= -->
+    
+    <!-- ================= MAIN CONTENT SECTION ================= -->
     <main id="about-main">
-
-        <!-- Section introducing the team and business -->
-        <section id="about-container">
-            <h1>The <strong>Data Nexus</strong> Team</h1>
-
-            <h2>Who Are We?</h2>
-            <ol>
-                <li>We are Data Nexus</li> 
-                <li>A renowned cybersecurity company aiming to make the internet a safe space for all</li> 
-            </ol>
-
-            <h2>Meet The Team</h2>
+        <div id="about-contained">
+        
+        <!-- Main title of the page -->
+        <h1 id="about-title">The <strong>Data Nexus</strong> Team</h1>
+    
+        <!-- Who the company is -->
+        <h2>Who Are We?</h2>
+            <ul>
+                <li>We are Data Nexus a renowned cybersecurity company aiming to make the internet a safe space for all</li>
+            </ul>
+        <!--Tutor-->
+        <h2>Tutor</h2>
+            <p>Razeen</p>
+            
+        <!-- Meet the team members section -->
+        <h2>Meet The Team</h2>
             <ol>
                 <li>Ashley Jean 105920941</li> 
                 <li>Ryan Neill 105139527</li> 
                 <li>Max Dinon 105910146</li> 
                 <li>Thomas Federico 105926570</li> 
             </ol>
-        </section>
 
-        <!-- Office and meeting information -->
+        <!-- Information on office location and meeting details -->
         <h2>Where Is Our Business Set Up?</h2>
         <ul>
             <li>BA building, Room 603</li>
@@ -71,29 +76,90 @@
 
         <!-- Roles and responsibilities of each team member -->
         <h2>Who Does What In Our Team?</h2>
-        <dl>
-            <dt>Home Page</dt><dd>Ryan Neil</dd>
-            <dt>Apply Page</dt><dd>Thomas Federico</dd>
-            <dt>About Page</dt><dd>Ashley Jean</dd>
-            <dt>Jobs Page</dt><dd>Max Dinon</dd>
-            <dt>CSS</dt><dd>A communal task</dd>
+        <dl class="team-roles">
+            <dt>Home Page</dt>
+                <dd>Ryan Neill</dd>
+            <dt>Navigation</dt>
+                <dd>Ryan Neill</dd>
+            <dt>CSS Consistency</dt>
+                <dd>Ryan Neill</dd>
+            <dt>Home CSS</dt>
+                <dd>Ryan Neill</dd>
+            <dt>Jira Management</dt>
+                <dd>Ryan Neill</dd>
+            <dt>About Page</dt>
+                <dd>Ashley Jean</dd>
+            <dt>About CSS</dt>
+                <dd>Ashley Jean</dd>
+            <dt>Jobs Page</dt>
+                <dd>Max Dinon</dd>
+            <dt>Jobs CSS</dt>
+                <dd>Max Dinon</dd>
+            <dt>Apply Page</dt>
+                <dd>Thoman Federicko</dd>
+            <dt>Apply CSS</dt>
+                <dd>Ryan Neill</dd>
         </dl>
 
-        <!-- Origin of each team member -->
+        <!-- Where each team member is from -->
+    <div class="two-column-container">
+        <div class="left-column">
         <h2>Where Is the Team From?</h2>    
         <ol>
-            <li>Ashley Jean is from</li>
-            <ul><li>Vermont</li></ul>
-            <li>Max Dinon is from</li>
-            <ul><li>Mitcham</li></ul>
-            <li>Ryan Neil is from</li>
-            <ul><li>Unknown</li></ul>
-            <li>Thomas Federico is from</li>
-            <ul><li>Blackburn</li></ul>
+            <li>Ashley Jean is from
+            <ul>
+                <li>Vermont</li>
+            </ul>
+            </li>
+            <li>Max Dinon is from
+            <ul>
+                <li>Mitcham</li>
+            </ul>
+            </li>
+            <li>Ryan Neil is from
+            <ul>
+                <li>Unknown</li>
+            </ul>
+            </li>
+            <li>Thomas Federico is from
+            <ul>
+                <li>Blackburn</li>
+            </ul>
+            </li>
         </ol>
+    </div>
 
-        <!-- Fun team facts table -->
+        <!-- Team members' images and brief description -->
+    <div class="right-column">
+        <h2>The Team</h2>
+        <div class="image-grid">
+            <div class="image-item">
+              <img src="images/max.png" alt="a picture of a person">
+              <p>Max Dinon</p>
+              <p>Cloud Security Enginner ☁️</p>
+            </div>
+            <div class="image-item">
+              <img src="images/thomas.png" alt="a picture of a person">
+              <p>Thomas Federicko</p>
+              <p>Adversary Emulation Specialist 🧠</p>
+            </div>
+            <div class="image-item">
+              <img src="images/ash.png" alt="a picture of a person">
+              <p>Ashley Jean</p>
+              <p>Security Systems Administrator 🛠️</p>
+            </div>
+            <div class="image-item">
+              <img src="images/ryan.png" alt="a picture of a person">
+              <p>Ryan Neil</p>
+              <p>Chief Information Security Officier 👔</p>
+            </div>
+        </div>
+        </div>
+    </div>
+        
+        <!-- Fun team facts displayed in a table -->
         <table>
+            <!--Title for each column in table-->
             <tr>
                 <th>Name</th>
                 <th>Interests</th>
@@ -102,14 +168,16 @@
                 <th>Favourite Movie</th>
                 <th>Fun Fact</th>
             </tr>
+             <!--Ryan section of table-->
             <tr>
                 <td>Ryan Neil</td>
                 <td>Aviation</td>
                 <td>Mr Happy</td>
-                <td>Severance</td>
+                <td>The Big Bang Theory</td>
                 <td>Frozen</td>
                 <td>When Ryan was born, he drove his mum home from the hospital</td>
             </tr>
+            <!--Ash section of table-->
             <tr>
                 <td>Ashley Jean</td>
                 <td>Engineering</td>
@@ -118,6 +186,7 @@
                 <td>The Hangover</td>
                 <td>Ashley will never call the wrong number — the person on the other end answers the wrong phone</td>
             </tr>
+            <!--Thomas section of table-->
             <tr>
                 <td>Thomas Federico</td>
                 <td>Music</td>
@@ -126,6 +195,7 @@
                 <td>Space Odyssey</td>
                 <td>Thomas once killed 2 stones with 1 bird</td>
             </tr>
+            <!--Max section of table-->
             <tr>
                 <td>Max Dinon</td>
                 <td>Programming</td>
@@ -135,11 +205,93 @@
                 <td>Max can slam a revolving door</td>
             </tr>
         </table>
-    </main>
+
+        <!-- Description of what Data Nexus is and its mission -->
+            <h2>What is <strong>Data Nexus?</strong></h2>
+            <div class="paragraphs">
+                <p>Data Nexus is a next-generation cybersecurity and IT solutions company and IT solutions company dedicated to redefining digital safety in an increasingly connected world. Founded with the mission to make cyberspace more secure and transparent, Data Nexus specializes in building advanced threat detection systems, automated risk assessment tools, and enterprise-level encryption solutions. Our innovative technologies are designed to adapt in real-time, protecting networks from both external breaches and internal vulnerabilities.</p>
+            </div>
+            <br>
+            <div class="paragraphs">
+                <p>At the core of Data Nexus is a belief in proactive cybersecurity  identifying threats before they happen. Whether it's deploying machine learning algorithms to detect abnormal behavior, securing cloud infrastructures, or providing consulting for incident response and recovery, our team delivers forward-thinking solutions tailored for modern digital ecosystems. We partner with businesses, educational institutions, and startups to provide custom IT infrastructure and cyber-resilience frameworks, ensuring our clients stay one step ahead of emerging threats.</p>
+            </div>
+            <br>
+            <div class="paragraphs">
+                <p>Data Nexus is a forward-thinking cybersecurity and IT consulting firm built on the foundation of trust, resilience, and innovation. We specialize in creating adaptive security frameworks that protect businesses from the ever-evolving landscape of digital threats. From real-time threat detection to robust encryption solutions, we deliver tailored systems designed to fortify and future-proof organizations of all sizes.</p>
+            </div>
+            <br>
+            <div class="paragraphs">
+                <p>Our expertise lies at the intersection of cloud security, data compliance, and ethical hacking. Whether we're conducting penetration tests or designing secure cloud migration paths, Data Nexus ensures our clients stay one step ahead. Our goal is to simplify cybersecurity, making it accessible, understandable, and integrated into the very core of every digital operation.</p>
+            </div>
+            
+            <br>
+
+       
+        
+        <!-- Company's core values -->
+         <section id="about-information-container">
+            <div id="about-core-values-container" class="about-data-nexus-containers">
+                <h2>Our Core Values</h2>
+                <ul>
+                    <li>Transparency in communication and process</li>
+                    <li>Innovation through ethical hacking and R&D</li>
+                    <li>Commitment to digital safety and privacy</li>
+                </ul>
+             </div>
+           
+            
+            <!-- Services offered by Data Nexus -->
+             <div id="about-services-container" class="about-data-nexus-containers">
+                <h2>What We Offer</h2>
+                <ul>
+                    <li>24/7 threat monitoring and incident response</li>
+                    <li>Custom cybersecurity assessments and audits</li>
+                    <li>Cloud architecture and data encryption solutions</li>
+                    <li>Compliance consulting for ISO, SOC 2, and GDPR</li>
+                </ul>
+             </div>
+    
+            
+            <!-- Why clients should choose Data Nexus -->
+             <div id="about-why-choose-container" class="about-data-nexus-containers">
+                <h2>Why Choose Data Nexus?</h2>
+                <ul>
+                    <li>Industry-certified experts with hands-on experience</li>
+                    <li>Tailored services for startups to enterprises</li>
+                    <li>Cutting-edge tech paired with proven methodologies</li>
+                </ul>
+             </div>
+         </section>
+         
+
+        <!-- Data Nexus achievements -->
+        <div class="image-pair">
+            <div class="image-box">
+              <img src="images/stock.png" alt="Data Nexus Stock Growth Graph">
+              <p class="caption">Data Nexus Stock Growth Over Time</p>
+              <p class="description">What started as a humble cybersecurity startup in a university dorm room has exploded into a global tech powerhouse. The graph illustrates Data Nexus's jaw-dropping climb, hitting an all-time high in 2025, breaking previous industry records.</p>
+              <br>
+              <p class="description">With unprecedented investments in AI-driven threat prevention and a client base including Fortune 100 companies, Data Nexus is now being hailed as the fastest-growing security firm of the decade. Analysts describe this as a "generational shift" in cyber defense valuation.</p>
+            </div>
+          
+            <div class="image-box">
+              <img src="images/time_line.png" alt="Data Nexus Company Timeline">
+              <p class="caption">Major Milestones in Data Nexus History</p>
+              <p class="description">From our founding in 2022, Data Nexus has been on a relentless mission to secure the digital world. In 2023, we launched our first real-time threat detection engine. By 2024, we expanded into 12 countries.</p>
+              <br>
+              <p class="description">2025 marked a turning point with our IPO, a partnership with global governments, and the launch of NexusShield, our proprietary AI cybersecurity system. Each point on the timeline marks a defining leap forward in our journey to becoming the guardians of the internet.</p>
+            </div>
+        </div>
+    </div>
+</main>
 
     <!-- ================= FOOTER ================= -->
     <footer>
-        <a href="#" id="footer-items">Jira Project</a>
-    </footer>
+        <div class="footer-content">
+          <a href="#" id="footer-items">Jira Project</a>
+          <p>Contact us at <a href="mailto:info@datanexus.com.au">info@datanexus.com.au</a></p>
+          <p>&copy; 2024 Data Nexus. All rights reserved.</p>
+        </div>
+      </footer>
 </body>
 </html>

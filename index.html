@@ -4,29 +4,31 @@
     <!-- Page metadata and links to external styles and fonts -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- AOS Animation Library CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- External stylesheet for page styling -->
+
     <link href="styles/styles.css" rel="stylesheet">
+
+        <!-- AOS Animation Library CSS -->
 
     <!-- Google Fonts: Poppins for a modern, clean look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-   <!-- Page description for SEO and search engine snippets -->
+    <!-- Page description for SEO and search engine snippets -->
     <meta name="description" content="Explore Data Nexus — a leading cybersecurity company offering innovative job opportunities for future tech professionals.">
+
 
     <!-- Relevant keywords for search engine optimization -->
     <meta name="keywords" content="Data Nexus, cybersecurity, tech careers, homepage, IT company, future jobs">
 
-    <!-- Author of the webpage -->
+    <!-- USED CHATGPT TO ANALYSE THE REQUIREMENTS, TO MAKE SURE WE COVERED EVERYTHING NEEDED BY THE ASSIGHMENT-->
+
+    
     <meta name="author" content="Ryan Neill">
 
     <title>Welcome to Data Nexus</title>
 </head>
 <body>
-
     <!-- Header section containing logo and navigation menu -->
     <header>
         <!-- Clickable logo linking back to the homepage -->
@@ -35,31 +37,66 @@
         </a>
 
         <!-- Navigation bar linking to site pages -->
-        <nav id="home-navigation">
+          <nav id="home-navigation">
             <a href="index.html" class="home-navlinks">Home</a>
             <a href="jobs.html" class="home-navlinks">Jobs</a>
             <a href="apply.html" class="home-navlinks">Apply</a>
             <a href="about.html" class="home-navlinks">About</a>
-        </nav>
+            </nav>
+
     </header>
 
     <!-- Main content area with a welcome message -->
     <main>
-        <section class="hero-intro">
-            <h1>Welcome to <span>Data Nexus</span></h1>
-            <p>Discover top cybersecurity roles tailored for future professionals</p>
-        </section>
+     
+        <section id="hero-intro">
+            <h1 class="fade-in-up">Welcome to <span>Data Nexus</span></h1>
+            <p class="fade-in-up delay-1">Discover top cybersecurity roles tailored for future professionals</p>
+          </section>
+          
+         <section id="webpage-navigation-info">
+          
+          <a href="jobs.html">
+            <div id="home-jobs-info" class="home-info-sections box-fade-in box-delay-1">
+            <h2>Jobs</h2>
+            <p>Explore exciting cybersecurity job opportunities across various roles and specialties.
+              Whether you’re just starting out or looking to advance your career, discover positions designed to grow you!</p>
+             
+          </div>
+        </a>
+
+        <a href="apply.html">
+          <div id="home-apply-info" class="home-info-sections box-fade-in box-delay-2">
+            <h2>Apply</h2>
+            <p>We’ve simplified every step so you can focus on showcasing your strengths. Join a company that values clarity, communication, and candidates who are ready to grow.</p>
+        
+          </div>
+        </a>
+
+        <a href="about.html">
+          <div id="home-about-info" class="home-info-sections box-fade-in box-delay-3">
+            <h2>About</h2>
+            <p>We’re a passionate group of tech enthusiasts on a mission to empower the next generation of cybersecurity professionals through innovation and mentorship.</p>
+          </div>
+        </a>
+  
+</section>
     </main>
 
     <!-- Footer with project resource link -->
     <footer>
+      <div class="footer-content">
         <a href="#" id="footer-items">Jira Project</a>
+        <p>Contact us at <a href="mailto:info@datanexus.com.au">info@datanexus.com.au</a></p>
+        <p>&copy; 2024 Data Nexus. All rights reserved.</p>
+      </div>
     </footer>
 
     <!-- AOS animation JavaScript library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Initializing AOS animations on page load -->
-    <script>AOS.init();</script>
+
+ 
 </body>
 </html>
