@@ -39,7 +39,9 @@ header {
     border-bottom: 1px solid #ff6600;
 }
 
-
+#home-current-page, #apply-current-page, #jobs-current-page, #about-current-page {
+    color: #ff6600;
+}
 
 /* Logo inside header */
 #home-logo {
